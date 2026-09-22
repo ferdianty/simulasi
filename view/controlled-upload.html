@@ -1,0 +1,601 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Controlled Upload - ERP PAD</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script src="../js/tailwind-config.js"></script>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="bg-[#F8FAFC] text-[#0F172A] font-sans antialiased min-h-screen">
+<!-- Persistent Sidebar -->
+<aside id="app-sidebar" class="fixed left-0 top-0 h-screen w-64 bg-surface-card border-r border-border-subtle z-50 flex flex-col justify-between shadow-sm transition-all duration-300">
+<div class="flex flex-col h-full">
+<div class="h-16 px-4 flex items-center border-b border-border-subtle bg-surface-card transition-all duration-300">
+<img id="sidebar-logo" alt="PAD Logo" class="h-9 w-auto object-contain shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBPebh6o-ArHmOrm3NNk-epNwZVbyhFzdCL7_w4NG_sZ8wl0WxBdMBRmluuZ3PwcVPyG8daB_b51DtS3iZd8_CNDuJcWSDNgFtjI2-vr59Cr1vw9X9NYn-GakQH1CEAJ1AZfiGg36lfEG492MGTS6mvCERBRKjXP8pS6dIUOqcvhqDxTGzdAyQ-QFIjWd3z6UMuQUI1IOJAX-SjHk1WIMcwaTQkpelrBc1DCs9Kx6US6YPxl2Xt1t5j0j2L4jE1zOmBxuA">
+</div>
+<div id="sidebar-section-title" class="px-4 pt-4 pb-2 transition-opacity duration-300">
+<span class="text-[11px] font-bold uppercase tracking-wider text-text-muted">Distribusi Semen</span>
+</div>
+<nav class="flex-1 px-3 space-y-1 overflow-y-auto">
+<a class="group flex items-center gap-2.5 px-3 py-2 rounded-lg text-text-secondary hover:bg-brand-blue-soft hover:text-brand-blue transition-colors cursor-pointer" href="index.html">
+<span class="material-symbols-outlined text-[19px] text-text-muted group-hover:text-brand-blue transition-colors">space_dashboard</span>
+<div class="sidebar-text flex flex-col min-w-0 transition-opacity duration-300">
+<span class="text-[13px] font-medium leading-tight group-hover:font-semibold">Dashboard</span>
+<span class="text-[10px] text-text-muted leading-tight group-hover:text-brand-blue/70">Ringkasan Harian</span>
+</div>
+</a>
+<a class="group flex items-center gap-2.5 px-3 py-2 rounded-lg text-text-secondary hover:bg-brand-blue-soft hover:text-brand-blue transition-colors cursor-pointer" href="master-data-akses.html">
+<span class="material-symbols-outlined text-[19px] text-text-muted group-hover:text-brand-blue transition-colors">database</span>
+<div class="sidebar-text flex flex-col min-w-0 transition-opacity duration-300">
+<span class="text-[13px] font-medium leading-tight group-hover:font-semibold">Master Data &amp; Akses</span>
+<span class="text-[10px] text-text-muted leading-tight group-hover:text-brand-blue/70">Data Referensi &amp; Hak Akses</span>
+</div>
+</a>
+<a class="group flex items-center gap-2.5 px-3 py-2 rounded-lg text-text-secondary hover:bg-brand-blue-soft hover:text-brand-blue transition-colors cursor-pointer" href="procurement.html">
+<span class="material-symbols-outlined text-[19px] text-text-muted group-hover:text-brand-blue transition-colors">shopping_cart</span>
+<div class="sidebar-text flex flex-col min-w-0 transition-opacity duration-300">
+<span class="text-[13px] font-medium leading-tight group-hover:font-semibold">Procurement</span>
+<span class="text-[10px] text-text-muted leading-tight group-hover:text-brand-blue/70">Pengadaan &amp; Pembelian</span>
+</div>
+</a>
+<a class="group flex items-center gap-2.5 px-3 py-2 rounded-lg text-text-secondary hover:bg-brand-blue-soft hover:text-brand-blue transition-colors cursor-pointer" href="warehouse-inventory.html">
+<span class="material-symbols-outlined text-[19px] text-text-muted group-hover:text-brand-blue transition-colors">warehouse</span>
+<div class="sidebar-text flex flex-col min-w-0 transition-opacity duration-300">
+<span class="text-[13px] font-medium leading-tight group-hover:font-semibold">Warehouse &amp; Inventory</span>
+<span class="text-[10px] text-text-muted leading-tight group-hover:text-brand-blue/70">Gudang &amp; Stok Semen</span>
+</div>
+</a>
+<a class="group flex items-center gap-2.5 px-3 py-2 rounded-lg text-text-secondary hover:bg-brand-blue-soft hover:text-brand-blue transition-colors cursor-pointer" href="sales-commercial.html">
+<span class="material-symbols-outlined text-[19px] text-text-muted group-hover:text-brand-blue transition-colors">point_of_sale</span>
+<div class="sidebar-text flex flex-col min-w-0 transition-opacity duration-300">
+<span class="text-[13px] font-medium leading-tight group-hover:font-semibold">Sales &amp; Commercial</span>
+<span class="text-[10px] text-text-muted leading-tight group-hover:text-brand-blue/70">Penjualan &amp; SF TIRO</span>
+</div>
+</a>
+<a class="group flex items-center gap-2.5 px-3 py-2 rounded-lg text-text-secondary hover:bg-brand-blue-soft hover:text-brand-blue transition-colors cursor-pointer" href="distribution-planning.html">
+<span class="material-symbols-outlined text-[19px] text-text-muted group-hover:text-brand-blue transition-colors">local_shipping</span>
+<div class="sidebar-text flex flex-col min-w-0 transition-opacity duration-300">
+<span class="text-[13px] font-medium leading-tight group-hover:font-semibold">Distribution Planning</span>
+<span class="text-[10px] text-text-muted leading-tight group-hover:text-brand-blue/70">Rencana &amp; Pengiriman</span>
+</div>
+</a>
+<a class="group flex items-center gap-2.5 px-3 py-2 rounded-lg text-text-secondary hover:bg-brand-blue-soft hover:text-brand-blue transition-colors cursor-pointer" href="finance-accounting.html">
+<span class="material-symbols-outlined text-[19px] text-text-muted group-hover:text-brand-blue transition-colors">receipt_long</span>
+<div class="sidebar-text flex flex-col min-w-0 transition-opacity duration-300">
+<span class="text-[13px] font-medium leading-tight group-hover:font-semibold">Finance &amp; Accounting</span>
+<span class="text-[10px] text-text-muted leading-tight group-hover:text-brand-blue/70">Faktur, Piutang &amp; Hutang</span>
+</div>
+</a>
+<a class="group flex items-center gap-2.5 px-3 py-2 rounded-lg text-text-secondary hover:bg-brand-blue-soft hover:text-brand-blue transition-colors cursor-pointer" href="tax-reporting.html">
+<span class="material-symbols-outlined text-[19px] text-text-muted group-hover:text-brand-blue transition-colors">account_balance</span>
+<div class="sidebar-text flex flex-col min-w-0 transition-opacity duration-300">
+<span class="text-[13px] font-medium leading-tight group-hover:font-semibold">Tax Reporting</span>
+<span class="text-[10px] text-text-muted leading-tight group-hover:text-brand-blue/70">Pelaporan Pajak &amp; Faktur</span>
+</div>
+</a>
+<a aria-current="page" class="flex items-center gap-2.5 px-3 py-2 rounded-lg transition-colors bg-brand-blue-soft text-brand-blue font-semibold border border-brand-blue-border/60 shadow-xs cursor-pointer" href="controlled-upload.html">
+<span class="material-symbols-outlined text-[19px] text-brand-blue">file_upload</span>
+<div class="sidebar-text flex flex-col min-w-0 transition-opacity duration-300">
+<span class="text-[13px] leading-tight font-semibold">Controlled Upload</span>
+<span class="text-[10px] text-brand-blue/70 font-normal leading-tight">Upload Template Excel</span>
+</div>
+</a>
+</nav>
+<div id="sidebar-footer" class="p-3 border-t border-border-subtle bg-slate-50/70">
+<div class="flex items-center justify-between text-[11px] text-text-muted">
+<span class="font-mono">v3.12.0 (Terminal SBY)</span>
+<span class="px-1.5 py-0.5 rounded bg-emerald-50 text-success-deep font-semibold border border-success-border text-[10px]">ONLINE</span>
+</div>
+</div>
+</div>
+</aside>
+<!-- Content Container -->
+<div id="app-content" class="pl-64 flex flex-col min-h-screen transition-all duration-300">
+<!-- Topbar / Header -->
+<header id="app-header" class="fixed top-0 left-64 right-0 h-16 bg-white border-b border-border-subtle shadow-xs z-40 px-6 flex items-center justify-between transition-all duration-300">
+<div class="flex items-center gap-4 flex-1 max-w-2xl">
+<button id="sidebar-toggle" class="p-1.5 rounded-lg hover:bg-slate-100 text-text-muted transition-colors flex items-center justify-center cursor-pointer" type="button">
+<span class="material-symbols-outlined text-[20px]">menu</span>
+</button>
+<!-- Breadcrumb / Unit -->
+<div class="flex items-center gap-1.5 text-[#64748B] text-[13px] shrink-0 font-medium">
+<span class="material-symbols-outlined text-[18px] text-[#94A3B8]">domain</span>
+<span class="font-semibold text-[#0F172A]">Depo Utama</span>
+<span class="text-[#CBD5E1]">/</span>
+<span class="text-[#475569]">Gudang Semen Curah &amp; Gudang Zak</span>
+</div>
+<!-- Search Input -->
+<div class="relative flex-1">
+<span class="material-symbols-outlined absolute left-2.5 top-1/2 -translate-y-1/2 text-[17px] text-[#94A3B8]">search</span>
+<input class="w-full h-8 pl-8 pr-3 bg-slate-50 hover:bg-slate-100/70 focus:bg-white rounded border border-[#E2E8F0] focus:border-[#1E3A8A] text-[#0F172A] text-[12px] focus:outline-none transition-all placeholder:text-[#94A3B8]" placeholder="Cari No DO, SO, Surat Jalan, SKU..." type="text">
+</div>
+</div>
+<!-- Right Header Actions -->
+<div class="flex items-center gap-4">
+<!-- TIRO Sync Badge -->
+<div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-[#DCFCE7] border border-[#BBF7D0] text-[#15803D] text-[11px] font-semibold">
+<span class="w-2 h-2 rounded-full bg-[#15803D] animate-pulse"></span>
+<span class="">TIRO Sync: Online</span>
+</div>
+<!-- Notifications Dropdown -->
+<div class="relative group">
+<button class="relative p-1.5 rounded hover:bg-slate-100 text-[#64748B] hover:text-[#0F172A] transition-colors flex items-center justify-center cursor-pointer" type="button">
+<span class="material-symbols-outlined text-[20px]">notifications</span>
+<span class="absolute top-1 right-1 w-2 h-2 bg-[#DC2626] rounded-full ring-2 ring-white"></span>
+</button>
+<div class="hidden group-hover:flex flex-col absolute right-0 top-full mt-1 w-80 bg-white border border-[#E2E8F0] rounded-xl shadow-lg py-2 z-50">
+<div class="px-4 py-2 flex items-center justify-between border-b border-[#E2E8F0]">
+<span class="text-[13px] font-semibold text-[#0F172A]">Notifikasi Operasional</span>
+<span class="text-[11px] text-[#1E3A8A] font-semibold bg-blue-50 px-2 py-0.5 rounded">3 Baru</span>
+</div>
+<div class="divide-y divide-slate-100 text-[12px]">
+<div class="p-3 hover:bg-slate-50">
+<p class="font-medium text-[#0F172A]">Gudang Bitung mencapai 88% kapasitas</p>
+<span class="text-[10px] text-[#94A3B8]">10 menit lalu</span>
+</div>
+<div class="p-3 hover:bg-slate-50">
+<p class="font-medium text-[#0F172A]">DO-PAD-2024-889 telah selesai dimuat ke armada</p>
+<span class="text-[10px] text-[#94A3B8]">25 menit lalu</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Profil Admin -->
+<div class="flex items-center gap-2.5 pl-3 border-l border-[#E2E8F0]">
+<div class="w-8 h-8 rounded-full bg-[#1E3A8A] text-white flex items-center justify-center font-semibold text-[12px] ring-1 ring-[#E2E8F0]">
+            BS
+          </div>
+<div class="flex flex-col leading-tight">
+<span class="text-[13px] font-semibold text-[#0F172A]">Budi Santoso</span>
+<span class="text-[10px] font-medium text-[#64748B]">Admin Operasional</span>
+</div>
+</div>
+</div>
+</header>
+<!-- Main Content -->
+<main class="relative pt-14 w-full px-8 py-6 flex-1"><div class="flex flex-col w-full space-y-6">
+<!-- Operational Header Context Strip -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-1">
+<div class="flex flex-col space-y-1">
+<div class="flex items-center gap-2">
+<span class="inline-flex items-center px-2 py-0.5 rounded bg-blue-50 text-[#1e3a8a] font-semibold text-[11px] tracking-wide uppercase">Modul Operasional</span>
+<span class="text-slate-400 text-xs">/</span>
+<span class="font-mono text-xs text-slate-500">STRICT-SCHEMA-V3</span>
+</div>
+<h1 class="text-2xl font-bold text-slate-900 tracking-tight">Controlled Template Upload</h1>
+<p class="text-xs text-slate-600 max-w-2xl leading-relaxed">
+        Modul Operasional Unggah Data Massal dengan Skema Ketat PAD. Hanya berkas format Excel resmi PAD yang diverifikasi sistem untuk mencegah anomali inventaris dan inkonsistensi buku besar.
+      </p>
+</div>
+<!-- Live Gateway Audit Metric -->
+<div class="flex items-center gap-3 bg-[#dcfce7] border border-[#bbf7d0] p-3 rounded-lg shadow-xs">
+<div class="w-10 h-10 rounded-md bg-[#15803d]/10 flex items-center justify-center text-[#15803d] shrink-0">
+<span class="material-symbols-outlined text-[22px]">verified_user</span>
+</div>
+<div class="flex flex-col pr-3 border-r border-[#bbf7d0]">
+<div class="flex items-center gap-1.5">
+<span class="text-[10px] uppercase font-bold text-[#15803d]">Integritas Skema</span>
+<span class="inline-block w-1.5 h-1.5 rounded-full bg-[#15803d] animate-pulse"></span>
+</div>
+<span class="text-base font-bold text-[#15803d]">99.84% Lolos Parse</span>
+</div>
+<div class="pl-1 flex flex-col justify-center"><span class="font-mono text-[11px] text-[#1e3a8a] font-semibold">Mode Validasi</span><span class="text-[11px] text-slate-600 font-medium">Ketat (Sandbox)</span></div>
+</div>
+</div>
+<!-- BAGIAN 1: Panel Unduh Template Excel Standar -->
+<section class="flex flex-col space-y-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-6 h-6 rounded bg-slate-100 flex items-center justify-center text-slate-600">
+<span class="material-symbols-outlined text-[16px]">file_download</span>
+</div>
+<div>
+<h2 class="text-sm font-bold text-slate-900">1. Unduh Template Excel Standar Resmi</h2>
+<p class="text-xs text-slate-500">Gunakan struktur berkas tak termodifikasi guna menjamin pemetaan kolom otomatis.</p>
+</div>
+</div>
+<span class="font-mono text-xs text-slate-400">Total 3 Master Skema Terbit</span>
+</div><div class="bg-white border border-[#E2E8F0] rounded-lg p-3.5 flex flex-col sm:flex-row sm:items-center justify-between gap-3"><div class="flex flex-col space-y-0.5"><label for="template-target-select" class="text-xs font-semibold text-slate-800 flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px] text-[#1e3a8a]">schema</span><span class="">Tipe Data Template Target</span><span class="text-[#B91C1C] text-[10px] font-normal">*Format Resmi Wajib</span></label><p class="text-[11px] text-slate-500">Hanya format template resmi yang disepakati oleh sistem PAD, bukan sembarang berkas Excel umum.</p></div><div class="relative min-w-[280px]"><select id="template-target-select" class="w-full h-8 pl-3 pr-8 rounded border border-slate-200 bg-slate-50 text-slate-800 text-xs font-medium focus:outline-none focus:border-[#1e3a8a] focus:bg-white appearance-none cursor-pointer py-1"><option value="SF_FALLBACK">Penjualan Manual &amp; Sales Form Fallback (.xlsx)</option><option value="OPNAME_STOCK" selected="">Rekonsiliasi Stock Opname Gudang (.xlsx)</option><option value="CUST_MASTER">Master Data Pelanggan Baru Retail (.xlsx)</option></select><span class="material-symbols-outlined absolute right-2.5 top-1/2 -translate-y-1/2 text-slate-400 pointer-events-none text-[16px]">expand_more</span></div></div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+<!-- Card Template 1 -->
+<div class="bg-white border border-[#E2E8F0] rounded-lg p-4 shadow-xs flex flex-col justify-between group hover:border-[#1e3a8a] transition-colors">
+<div>
+<div class="flex items-start justify-between mb-3">
+<div class="w-10 h-10 rounded-md bg-blue-50 text-[#1e3a8a] flex items-center justify-center">
+<span class="material-symbols-outlined text-[22px]">receipt_long</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-slate-100 text-slate-600 font-mono text-[10px] font-semibold">REV-2025.02</span>
+</div>
+<h3 class="text-sm font-bold text-slate-900 leading-tight mb-1.5">Penjualan Manual &amp; Sales Form Fallback</h3>
+<p class="text-xs text-slate-500 mb-4 leading-relaxed">
+            Template saat sinkronisasi SF TIRO mengalami latensi jaringan. Dilengkapi validasi format kode DO, termin TOP, dan batas plafon kredit.
+          </p>
+<div class="bg-slate-50 border border-slate-100 rounded p-2.5 mb-4">
+<div class="flex items-center justify-between text-slate-600 text-[11px] mb-1">
+<span class="font-medium">Kolom Kritis:</span>
+<span class="font-mono font-semibold text-[#1e3a8a]">KODE_CUST, SKU, VOL_TON</span>
+</div>
+<div class="flex items-center justify-between text-slate-400 text-[10px]">
+<span class="">Toleransi Header: 0 Pergeseran</span>
+<span class="">Ukuran: 42 KB</span>
+</div>
+</div>
+</div>
+<button class="w-full h-8 px-3 rounded border border-slate-200 bg-slate-50 hover:bg-[#1e3a8a] hover:text-white hover:border-[#1e3a8a] text-slate-700 transition-colors text-xs font-semibold flex items-center justify-center gap-1.5 cursor-pointer" type="button">
+<span class="material-symbols-outlined text-[16px]">download</span>
+<span class="">Unduh Template (.xlsx)</span>
+</button>
+</div>
+<!-- Card Template 2 -->
+<div class="bg-white border border-[#E2E8F0] rounded-lg p-4 shadow-xs flex flex-col justify-between group hover:border-[#1e3a8a] transition-colors"><div><div class="flex items-start justify-between mb-3"><div class="w-10 h-10 rounded-md bg-[#dcfce7] text-[#15803d] flex items-center justify-center"><span class="material-symbols-outlined text-[22px]">inventory_2</span></div><span class="px-2 py-0.5 rounded bg-slate-100 text-slate-600 font-mono text-[10px] font-semibold">REV-2025.01</span></div><h3 class="text-sm font-bold text-slate-900 leading-tight mb-1.5">Rekonsiliasi Stock Opname Gudang</h3><p class="text-xs text-slate-500 mb-4 leading-relaxed">Format input volume sounding gudang semen curah &amp; pencacahan pallet semen kantong per depo untuk penyesuaian kartu stok periodik.</p><div class="bg-slate-50 border border-slate-100 rounded p-2.5 mb-4"><div class="flex items-center justify-between text-slate-600 text-[11px] mb-1"><span class="font-medium">Kolom Kritis:</span><span class="font-mono font-semibold text-[#15803d]">ID_GUDANG, TERA_SOUND, SAK_UTUH</span></div><div class="flex items-center justify-between text-slate-400 text-[10px]"><span class="">Toleransi Suhu/Densitas: Aktif</span><span class="">Ukuran: 54 KB</span></div></div></div><button class="w-full h-8 px-3 rounded border border-slate-200 bg-slate-50 hover:bg-[#1e3a8a] hover:text-white hover:border-[#1e3a8a] text-slate-700 transition-colors text-xs font-semibold flex items-center justify-center gap-1.5 cursor-pointer" type="button"><span class="material-symbols-outlined text-[16px]">download</span><span class="">Unduh Template (.xlsx)</span></button></div>
+<!-- Card Template 3 -->
+<div class="bg-white border border-[#E2E8F0] rounded-lg p-4 shadow-xs flex flex-col justify-between group hover:border-[#1e3a8a] transition-colors">
+<div>
+<div class="flex items-start justify-between mb-3">
+<div class="w-10 h-10 rounded-md bg-blue-50 text-[#1e3a8a] flex items-center justify-center">
+<span class="material-symbols-outlined text-[22px]">storefront</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-slate-100 text-slate-600 font-mono text-[10px] font-semibold">REV-2024.11</span>
+</div>
+<h3 class="text-sm font-bold text-slate-900 leading-tight mb-1.5">Master Data Pelanggan Baru Retail</h3>
+<p class="text-xs text-slate-500 mb-4 leading-relaxed">
+            Pendaftaran toko bahan bangunan, kontraktor proyek batching plant, validasi format NIK/NPWP 16 digit, koordinat geo delivery point.
+          </p>
+<div class="bg-slate-50 border border-slate-100 rounded p-2.5 mb-4">
+<div class="flex items-center justify-between text-slate-600 text-[11px] mb-1">
+<span class="font-medium">Kolom Kritis:</span>
+<span class="font-mono font-semibold text-[#1e3a8a]">NPWP_16, NAMA_BADAN, GEO_LAT_LONG</span>
+</div>
+<div class="flex items-center justify-between text-slate-400 text-[10px]">
+<span class="">Tax Sync DGT: Terintegrasi</span>
+<span class="">Ukuran: 48 KB</span>
+</div>
+</div>
+</div>
+<button class="w-full h-8 px-3 rounded border border-slate-200 bg-slate-50 hover:bg-[#1e3a8a] hover:text-white hover:border-[#1e3a8a] text-slate-700 transition-colors text-xs font-semibold flex items-center justify-center gap-1.5 cursor-pointer" type="button">
+<span class="material-symbols-outlined text-[16px]">download</span>
+<span class="">Unduh Template (.xlsx)</span>
+</button>
+</div>
+</div>
+</section>
+<!-- BAGIAN 2: Form Upload File dengan Validasi Ketat -->
+<section class="bg-white border border-[#E2E8F0] rounded-lg p-5 shadow-xs space-y-5">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-1 border-b border-slate-100">
+<div class="flex items-center gap-2">
+<div class="w-6 h-6 rounded bg-blue-50 text-[#1e3a8a] flex items-center justify-center">
+<span class="material-symbols-outlined text-[16px]">upload_file</span>
+</div>
+<div>
+<h2 class="text-sm font-bold text-slate-900">2. Terminal Validasi &amp; Eksekusi Unggahan Terkendali</h2>
+<p class="text-xs text-slate-500">Sistem melakukan sanitasi data instan dan verifikasi integritas sebelum komit database.</p>
+</div>
+</div>
+<div class="inline-flex items-center gap-1.5 px-2.5 py-1 bg-slate-50 border border-slate-200 rounded font-mono text-[11px] text-slate-600"><span class="material-symbols-outlined text-[14px] text-[#15803d]">verified_user</span><span class="">Mode Validasi: Ketat (Sandbox)</span></div>
+</div>
+<!-- Operational Form Layout Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-5">
+<!-- Left Column: Parameters & Dropzone -->
+<div class="lg:col-span-6 flex flex-col space-y-4">
+<!-- Template Type Selector -->
+<div class="flex flex-col space-y-1">
+<label class="text-xs font-semibold text-slate-800 flex items-center justify-between" for="template-select">
+<span class="">Tipe Data Template Target</span>
+<span class="text-[#B91C1C] font-normal text-[11px]">*Wajib Dipilih Sesuai Konten</span>
+</label>
+<div class="relative">
+<select class="w-full h-9 px-3 pr-8 rounded border border-slate-200 bg-white text-slate-800 text-xs font-medium focus:outline-none focus:border-[#1e3a8a] transition-colors appearance-none cursor-pointer py-1.5" id="template-select">
+<option selected="" value="SF_FALLBACK">Template Penjualan Manual / Sales Form Fallback (.xlsx)</option>
+<option value="OPNAME_STOCK">Template Rekonsiliasi Hasil Stock Opname Fisik Gudang (.xlsx)</option>
+<option value="CUST_MASTER">Template Master Data Pelanggan Baru Toko Bangunan (.xlsx)</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-1/2 -translate-y-1/2 text-slate-400 pointer-events-none text-[18px]">expand_more</span>
+</div>
+</div>
+<!-- Controlled Dropzone Zone -->
+<div class="flex flex-col space-y-1">
+<span class="text-xs font-semibold text-slate-800">Pilih Berkas Berisi Data</span>
+<div class="relative rounded-lg border-2 border-dashed border-slate-200 p-6 flex flex-col items-center justify-center text-center cursor-pointer transition-colors bg-slate-50/50 hover:bg-blue-50/30 hover:border-[#1e3a8a] group min-h-[160px]">
+<input accept=".xlsx,.csv" class="absolute inset-0 w-full h-full opacity-0 cursor-pointer" type="file">
+<div class="w-12 h-12 rounded-full bg-white border border-slate-200 flex items-center justify-center text-[#1e3a8a] mb-2 group-hover:scale-105 transition-transform shadow-xs">
+<span class="material-symbols-outlined text-[24px]">cloud_upload</span>
+</div>
+<p class="text-xs text-slate-700 font-medium mb-0.5">
+              Tarik &amp; lepas berkas di sini, atau <span class="text-[#1e3a8a] font-semibold underline">telusuri file lokal</span>
+</p>
+<span class="font-mono text-[11px] text-slate-400">
+              Hanya format .xlsx atau .csv standar PAD (Maks. 20 MB / 15.000 baris per batch)
+            </span>
+</div>
+</div>
+<!-- Loaded File Identification Badge -->
+<div class="p-2.5 rounded-lg bg-slate-50 border border-slate-200 flex items-center justify-between">
+<div class="flex items-center gap-2.5 min-w-0">
+<div class="w-8 h-8 rounded bg-white border border-slate-200 flex items-center justify-center text-[#15803d] shrink-0">
+<span class="material-symbols-outlined text-[18px]">table_chart</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="text-xs font-semibold text-slate-800 truncate">BATCH_SF_REKONSILIASI_REGION_JATIM_28FEB.xlsx</span>
+<span class="font-mono text-[10px] text-slate-500 truncate">Size: 184.2 KB • MD5: d74a98f12c • 8 Kolom Dikenali</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-slate-400 hover:text-[#B91C1C] text-[18px] cursor-pointer" title="Hapus Berkas">close</span>
+</div>
+</div>
+<!-- Right Column: Real-time Pre-validation Panel -->
+<div class="lg:col-span-6 flex flex-col justify-between bg-slate-50 border border-slate-200 rounded-lg p-4 space-y-4">
+<div>
+<div class="flex items-center justify-between pb-2 border-b border-slate-200">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-[#1e3a8a]">rule</span>
+<span class="text-xs font-bold text-slate-800">Validasi Pra-Unggah Otomatis</span>
+</div>
+<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded bg-[#FEE2E2] text-[#B91C1C] border border-[#FECACA] font-mono text-[10px] font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-[#B91C1C]"></span>
+              2 Isu Terdeteksi
+            </span>
+</div>
+<!-- Live Metrics Grid -->
+<div class="grid grid-cols-3 gap-2.5 my-3">
+<div class="bg-white border border-slate-200 rounded p-2.5 flex flex-col">
+<span class="text-[10px] uppercase text-slate-400 font-bold">Total Baris</span>
+<span class="text-base font-bold text-slate-800 font-mono mt-0.5">1,240</span>
+<span class="text-[10px] text-slate-400">Termasuk 1 header</span>
+</div>
+<div class="bg-white border border-[#bbf7d0] rounded p-2.5 flex flex-col">
+<span class="text-[10px] uppercase text-[#15803d] font-bold">Baris Valid</span>
+<span class="text-base font-bold text-[#15803d] font-mono mt-0.5">1,232</span>
+<span class="text-[10px] text-[#15803d] font-medium">99.35% Siap Commit</span>
+</div>
+<div class="bg-white border border-[#FECACA] rounded p-2.5 flex flex-col">
+<span class="text-[10px] uppercase text-[#B91C1C] font-bold">Gagal Validasi</span>
+<span class="text-base font-bold text-[#B91C1C] font-mono mt-0.5">8</span>
+<span class="text-[10px] text-[#B91C1C] font-medium">Memerlukan Aksi</span>
+</div>
+</div>
+<!-- Column Header Completeness Checklist -->
+<div class="space-y-1.5 mb-2"><div class="flex items-center justify-between"><span class="text-[11px] text-slate-500 uppercase font-semibold">Pratinjau Data (Sampling 4 Baris):</span><span class="font-mono text-[10px] text-slate-400">Header: NO_SURAT_JALAN • SKU_SEMEN_ID • QTY_TONNAGE</span></div><div class="border border-slate-200 rounded overflow-hidden bg-white"><table class="w-full text-left border-collapse text-[11px] font-mono"><thead class="bg-slate-100/70 border-b border-slate-200 text-slate-600 text-[10px]"><tr><th class="py-1.5 px-2 font-semibold">NO_SURAT_JALAN</th><th class="py-1.5 px-2 font-semibold">SKU_SEMEN_ID</th><th class="py-1.5 px-2 font-semibold text-right">QTY_TONNAGE</th><th class="py-1.5 px-2 font-semibold text-center">STATUS SKEMA</th></tr></thead><tbody class="divide-y divide-slate-100 text-[10px]"><tr class="hover:bg-slate-50"><td class="py-1 px-2 text-slate-700">SJ-2025-08101</td><td class="py-1 px-2 text-[#1e3a8a]">PAD-PCC-50KG</td><td class="py-1 px-2 text-right font-semibold text-slate-800">24.00</td><td class="py-1 px-2 text-center text-[#15803d] font-semibold">VALID</td></tr><tr class="hover:bg-slate-50"><td class="py-1 px-2 text-slate-700">SJ-2025-08102</td><td class="py-1 px-2 text-[#1e3a8a]">PAD-OPC-BULK</td><td class="py-1 px-2 text-right font-semibold text-slate-800">32.50</td><td class="py-1 px-2 text-center text-[#15803d] font-semibold">VALID</td></tr><tr class="hover:bg-slate-50"><td class="py-1 px-2 text-slate-700">SJ-2025-08103</td><td class="py-1 px-2 text-[#1e3a8a]">PAD-PCC-40KG</td><td class="py-1 px-2 text-right font-semibold text-slate-800">16.00</td><td class="py-1 px-2 text-center text-[#15803d] font-semibold">VALID</td></tr><tr class="bg-[#FEE2E2]/60 text-[#B91C1C]"><td class="py-1 px-2 font-bold">SJ-2025-08142</td><td class="py-1 px-2">PAD-PCC-50KG</td><td class="py-1 px-2 text-right font-bold">-5.00</td><td class="py-1 px-2 text-center font-bold">NPWP_TOKO: Format Salah</td></tr></tbody></table></div></div>
+<!-- Error Alert Banner -->
+<div class="bg-[#FEE2E2] border border-[#FECACA] rounded-md p-2.5 flex items-start gap-2 text-[#B91C1C]">
+<span class="material-symbols-outlined text-[18px] shrink-0 mt-0.5">warning</span>
+<div class="flex flex-col text-[11px] leading-relaxed">
+<span class="font-bold">Peringatan: 8 Baris Memiliki Data Cacat</span>
+              Baris #42, #78, #112: NPWP tidak memenuhi format 16 digit. Baris #403: Kolom tonase bernilai negatif. Berkas dapat diunggah dengan opsi drop baris gagal atau revisi berkas master.
+            </div>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="flex flex-col sm:flex-row items-center justify-end gap-2.5 pt-2 border-t border-slate-200">
+<button class="w-full sm:w-auto h-9 px-4 rounded border border-slate-300 bg-white text-slate-700 text-xs font-semibold hover:bg-slate-100 transition-colors cursor-pointer" type="button">
+            Bersihkan Berkas
+          </button>
+<button class="w-full sm:w-auto h-9 px-6 rounded-lg bg-[#1e3a8a] hover:bg-blue-800 text-white text-xs font-medium flex items-center justify-center gap-2 transition-colors shadow-sm cursor-pointer" type="button">
+<span class="material-symbols-outlined text-[18px]">database</span>
+<span class="">Proses &amp; Validasi File (1,232 Baris)</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- BAGIAN 3: Tabel Status & Riwayat Upload Terkendali -->
+<section class="bg-white border border-[#E2E8F0] rounded-lg shadow-xs overflow-hidden flex flex-col">
+<!-- Table Header & Filter Bar -->
+<div class="p-4 flex flex-col md:flex-row md:items-center justify-between gap-3 bg-white border-b border-[#E2E8F0]">
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-slate-400">history</span>
+<h2 class="text-sm font-bold text-slate-900">3. Log Audit Riwayat Unggahan Terkendali</h2>
+</div>
+<p class="text-xs text-slate-500">Daftar rekonsiliasi berkas yang diunggah staf logistik &amp; akuntansi 30 hari terakhir.</p>
+</div>
+<!-- Quick Action Filtering Controls -->
+<div class="flex items-center gap-2">
+<div class="inline-flex rounded-md p-0.5 bg-slate-100 border border-slate-200">
+<button class="px-3 py-1 rounded text-xs bg-white text-slate-900 font-semibold shadow-xs cursor-pointer" type="button">Semua (48)</button>
+<button class="px-3 py-1 rounded text-xs text-slate-600 hover:text-slate-900 hover:bg-white/60 transition-colors cursor-pointer" type="button">Berhasil (41)</button>
+<button class="px-3 py-1 rounded text-xs text-slate-600 hover:text-slate-900 hover:bg-white/60 transition-colors cursor-pointer" type="button">Perlu Koreksi (7)</button>
+</div>
+<button class="h-8 px-3 rounded border border-slate-200 bg-white text-slate-600 hover:bg-slate-50 hover:text-slate-900 flex items-center gap-1.5 text-xs font-medium transition-colors cursor-pointer" type="button">
+<span class="material-symbols-outlined text-[16px]">filter_list</span>
+<span class="">Filter</span>
+</button>
+</div>
+</div>
+<!-- Strict High-Throughput Data Table -->
+<div class="overflow-x-auto w-full">
+<table class="w-full text-left border-collapse">
+<thead class="bg-slate-50 border-b border-slate-200 text-slate-600 text-[11px] uppercase tracking-wider">
+<tr>
+<th class="py-2.5 px-4 font-semibold">ID Unggahan</th>
+<th class="py-2.5 px-4 font-semibold">Waktu Upload</th>
+<th class="py-2.5 px-4 font-semibold">Nama File</th>
+<th class="py-2.5 px-4 font-semibold">Tipe Template</th>
+<th class="py-2.5 px-4 font-semibold text-right">Total Baris</th>
+<th class="py-2.5 px-4 font-semibold text-right text-[#15803d]">Berhasil</th>
+<th class="py-2.5 px-4 font-semibold text-right text-[#B91C1C]">Gagal</th>
+<th class="py-2.5 px-4 font-semibold text-center">Status</th>
+<th class="py-2.5 px-4 font-semibold">Petugas</th>
+<th class="py-2.5 px-4 font-semibold text-right">Aksi</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-slate-100 text-xs text-slate-800">
+<!-- Row 1: Partial Failure / Perlu Koreksi -->
+<tr class="hover:bg-slate-50/80 transition-colors">
+<td class="py-3 px-4 font-mono font-medium text-[#1e3a8a]">#UPL-88329</td>
+<td class="py-3 px-4 whitespace-nowrap">
+<span class="font-medium text-slate-800">28 Feb 2025</span>
+<span class="font-mono text-[10px] text-slate-400 block">14:22:10 WIB</span>
+</td>
+<td class="py-3 px-4">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-slate-400">description</span>
+<span class="font-medium truncate max-w-[190px]" title="FALLBACK_SF_SIDOARJO_SHIFT1.xlsx">FALLBACK_SF_SIDOARJO_SHIFT1.xlsx</span>
+</div>
+</td>
+<td class="py-3 px-4">
+<span class="inline-block px-2 py-0.5 rounded bg-slate-100 text-slate-700 text-[10px] font-medium">Sales Fallback</span>
+</td>
+<td class="py-3 px-4 text-right font-mono font-medium">850</td>
+<td class="py-3 px-4 text-right font-mono text-[#15803d] font-semibold">838</td>
+<td class="py-3 px-4 text-right font-mono text-[#B91C1C] font-semibold">12</td>
+<td class="py-3 px-4 text-center"><span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-[#dcfce7] text-[#15803d] text-[11px] font-semibold border border-[#bbf7d0] hidden"></span><span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-slate-100 text-slate-800 text-[11px] font-semibold border border-slate-200"><span class="w-1.5 h-1.5 rounded-full bg-[#B91C1C]"></span>Perlu Koreksi</span></td>
+<td class="py-3 px-4 whitespace-nowrap">
+<span class="font-medium text-slate-800">Budi Santoso</span>
+<span class="font-mono text-[10px] text-slate-400 block">Depo SBY</span>
+</td>
+<td class="py-3 px-4 text-right whitespace-nowrap">
+<div class="inline-flex items-center gap-1">
+<button class="h-7 px-2.5 rounded bg-[#FEE2E2] hover:bg-red-200 text-[#B91C1C] text-[11px] font-semibold transition-colors flex items-center gap-1 cursor-pointer" type="button">
+<span class="material-symbols-outlined text-[14px]">error_outline</span>
+<span class="">Lihat Log Error</span>
+</button>
+<button class="h-7 px-2 rounded border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 text-[11px] font-medium transition-colors cursor-pointer" title="Unduh Rincian Koreksi" type="button">
+<span class="material-symbols-outlined text-[14px]">download</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2: Complete Success -->
+<tr class="hover:bg-slate-50/80 transition-colors">
+<td class="py-3 px-4 font-mono font-medium text-[#1e3a8a]">#UPL-88325</td>
+<td class="py-3 px-4 whitespace-nowrap">
+<span class="font-medium text-slate-800">28 Feb 2025</span>
+<span class="font-mono text-[10px] text-slate-400 block">11:05:44 WIB</span>
+</td>
+<td class="py-3 px-4">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-slate-400">description</span>
+<span class="font-medium truncate max-w-[190px]" title="OPNAME_GUDANG_GRESIK_W4.xlsx" style="opacity: 0;">OPNAME_GUDANG_GRESIK_W4.xlsx</span>
+</div>
+</td>
+<td class="py-3 px-4">
+<span class="inline-block px-2 py-0.5 rounded bg-slate-100 text-slate-700 text-[10px] font-medium">Stock Opname</span>
+</td>
+<td class="py-3 px-4 text-right font-mono font-medium">320</td>
+<td class="py-3 px-4 text-right font-mono text-[#15803d] font-semibold">320</td>
+<td class="py-3 px-4 text-right font-mono text-slate-400">0</td>
+<td class="py-3 px-4 text-center">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-[#DCFCE7] text-[#15803d] text-[11px] font-semibold border border-[#BBF7D0]">
+<span class="w-1.5 h-1.5 rounded-full bg-[#15803d]"></span>
+                Berhasil Diproses
+              </span>
+</td>
+<td class="py-3 px-4 whitespace-nowrap">
+<span class="font-medium text-slate-800">Hendri Wijaya</span>
+<span class="font-mono text-[10px] text-slate-400 block">Silo Lead</span>
+</td>
+<td class="py-3 px-4 text-right whitespace-nowrap">
+<button class="h-7 px-2.5 rounded border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 text-[11px] font-medium transition-colors flex items-center gap-1 ml-auto cursor-pointer" type="button">
+<span class="material-symbols-outlined text-[14px]">receipt</span>
+<span class="">Rincian Slip</span>
+</button>
+</td>
+</tr>
+<!-- Row 3: Pending Validation -->
+<tr class="hover:bg-slate-50/80 transition-colors">
+<td class="py-3 px-4 font-mono font-medium text-[#1e3a8a]">#UPL-88320</td>
+<td class="py-3 px-4 whitespace-nowrap">
+<span class="font-medium text-slate-800">28 Feb 2025</span>
+<span class="font-mono text-[10px] text-slate-400 block">09:41:18 WIB</span>
+</td>
+<td class="py-3 px-4">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-slate-400">description</span>
+<span class="font-medium truncate max-w-[190px]" title="NEW_RETAILERS_MALANG_RAYA.xlsx">NEW_RETAILERS_MALANG_RAYA.xlsx</span>
+</div>
+</td>
+<td class="py-3 px-4">
+<span class="inline-block px-2 py-0.5 rounded bg-slate-100 text-slate-700 text-[10px] font-medium">Master Pelanggan</span>
+</td>
+<td class="py-3 px-4 text-right font-mono font-medium">145</td>
+<td class="py-3 px-4 text-right font-mono text-slate-400">-</td>
+<td class="py-3 px-4 text-right font-mono text-slate-400">-</td>
+<td class="py-3 px-4 text-center">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-blue-50 text-[#1e3a8a] text-[11px] font-semibold border border-blue-200">
+<span class="w-1.5 h-1.5 rounded-full bg-[#1e3a8a] animate-ping"></span>
+                Validasi Pending
+              </span>
+</td>
+<td class="py-3 px-4 whitespace-nowrap">
+<span class="font-medium text-slate-800">Ratna Dewi</span>
+<span class="font-mono text-[10px] text-slate-400 block">Sales Admin</span>
+</td>
+<td class="py-3 px-4 text-right whitespace-nowrap">
+<button class="h-7 px-2.5 rounded bg-slate-100 hover:bg-slate-200 text-slate-800 text-[11px] font-semibold transition-colors flex items-center gap-1 ml-auto cursor-pointer" type="button">
+<span class="material-symbols-outlined text-[14px]">refresh</span>
+<span class="">Cek Antrean</span>
+</button>
+</td>
+</tr>
+<!-- Row 4: Complete Success -->
+<tr class="hover:bg-slate-50/80 transition-colors">
+<td class="py-3 px-4 font-mono font-medium text-[#1e3a8a]">#UPL-88318</td>
+<td class="py-3 px-4 whitespace-nowrap">
+<span class="font-medium text-slate-800">27 Feb 2025</span>
+<span class="font-mono text-[10px] text-slate-400 block">17:50:02 WIB</span>
+</td>
+<td class="py-3 px-4">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-slate-400">description</span>
+<span class="font-medium truncate max-w-[190px]" title="FALLBACK_SF_PASURUAN_CURAH.xlsx">FALLBACK_SF_PASURUAN_CURAH.xlsx</span>
+</div>
+</td>
+<td class="py-3 px-4">
+<span class="inline-block px-2 py-0.5 rounded bg-slate-100 text-slate-700 text-[10px] font-medium">Sales Fallback</span>
+</td>
+<td class="py-3 px-4 text-right font-mono font-medium">612</td>
+<td class="py-3 px-4 text-right font-mono text-[#15803d] font-semibold">612</td>
+<td class="py-3 px-4 text-right font-mono text-slate-400">0</td>
+<td class="py-3 px-4 text-center">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-[#DCFCE7] text-[#15803d] text-[11px] font-semibold border border-[#BBF7D0]">
+<span class="w-1.5 h-1.5 rounded-full bg-[#15803d]"></span>
+                Berhasil Diproses
+              </span>
+</td>
+<td class="py-3 px-4 whitespace-nowrap">
+<span class="font-medium text-slate-800">Budi Santoso</span>
+<span class="font-mono text-[10px] text-slate-400 block">Depo SBY</span>
+</td>
+<td class="py-3 px-4 text-right whitespace-nowrap">
+<button class="h-7 px-2.5 rounded border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 text-[11px] font-medium transition-colors flex items-center gap-1 ml-auto cursor-pointer" type="button">
+<span class="material-symbols-outlined text-[14px]">receipt</span>
+<span class="">Rincian Slip</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Pagination Footer -->
+<div class="p-3 px-4 bg-slate-50 border-t border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-600">
+<div class="flex items-center gap-2 font-mono text-[11px]">
+<span class="">Menampilkan 1-4 dari 48 rekaman upload</span>
+<span class="text-slate-400">•</span>
+<span class="">Batch Engine: Active Worker #3</span>
+</div>
+<div class="flex items-center gap-1">
+<button class="w-7 h-7 rounded border border-slate-200 bg-white text-slate-700 flex items-center justify-center hover:bg-slate-100 disabled:opacity-40 cursor-pointer" disabled="" type="button">
+<span class="material-symbols-outlined text-[16px]">chevron_left</span>
+</button>
+<button class="w-7 h-7 rounded bg-[#1e3a8a] text-white text-xs font-semibold flex items-center justify-center cursor-pointer" type="button">1</button>
+<button class="w-7 h-7 rounded border border-slate-200 bg-white text-slate-700 hover:bg-slate-100 text-xs flex items-center justify-center cursor-pointer" type="button">2</button>
+<button class="w-7 h-7 rounded border border-slate-200 bg-white text-slate-700 hover:bg-slate-100 text-xs flex items-center justify-center cursor-pointer" type="button">3</button>
+<span class="px-1 text-slate-400">...</span>
+<button class="w-7 h-7 rounded border border-slate-200 bg-white text-slate-700 hover:bg-slate-100 text-xs flex items-center justify-center cursor-pointer" type="button">12</button>
+<button class="w-7 h-7 rounded border border-slate-200 bg-white text-slate-700 flex items-center justify-center hover:bg-slate-100 cursor-pointer" type="button">
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+</div>
+</section>
+</div></main>
+</div>
+
+
+
+
+
+<div id="snapdom-sandbox" data-snapdom-sandbox="true" aria-hidden="true" style="position: absolute; left: -9999px; top: -9999px; width: 0px; height: 0px; overflow: hidden;"></div><script src="../js/script.js"></script>
+</body></html>

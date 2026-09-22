@@ -1,0 +1,563 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Sales &amp; Commercial - ERP PAD</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script src="../js/tailwind-config.js"></script>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="bg-[#F8FAFC] text-[#0F172A] font-sans antialiased min-h-screen">
+<!-- Persistent Sidebar -->
+<aside id="app-sidebar" class="fixed left-0 top-0 h-screen w-64 bg-surface-card border-r border-border-subtle z-50 flex flex-col justify-between shadow-sm transition-all duration-300">
+<div class="flex flex-col h-full">
+<div class="h-16 px-4 flex items-center border-b border-border-subtle bg-surface-card transition-all duration-300">
+<img id="sidebar-logo" alt="PAD Logo" class="h-9 w-auto object-contain shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBPebh6o-ArHmOrm3NNk-epNwZVbyhFzdCL7_w4NG_sZ8wl0WxBdMBRmluuZ3PwcVPyG8daB_b51DtS3iZd8_CNDuJcWSDNgFtjI2-vr59Cr1vw9X9NYn-GakQH1CEAJ1AZfiGg36lfEG492MGTS6mvCERBRKjXP8pS6dIUOqcvhqDxTGzdAyQ-QFIjWd3z6UMuQUI1IOJAX-SjHk1WIMcwaTQkpelrBc1DCs9Kx6US6YPxl2Xt1t5j0j2L4jE1zOmBxuA">
+</div>
+<div id="sidebar-section-title" class="px-4 pt-4 pb-2 transition-opacity duration-300">
+<span class="text-[11px] font-bold uppercase tracking-wider text-text-muted">Distribusi Semen</span>
+</div>
+<nav class="flex-1 px-3 space-y-1 overflow-y-auto">
+<a class="group flex items-center gap-2.5 px-3 py-2 rounded-lg text-text-secondary hover:bg-brand-blue-soft hover:text-brand-blue transition-colors cursor-pointer" href="index.html">
+<span class="material-symbols-outlined text-[19px] text-text-muted group-hover:text-brand-blue transition-colors">space_dashboard</span>
+<div class="sidebar-text flex flex-col min-w-0 transition-opacity duration-300">
+<span class="text-[13px] font-medium leading-tight group-hover:font-semibold">Dashboard</span>
+<span class="text-[10px] text-text-muted leading-tight group-hover:text-brand-blue/70">Ringkasan Harian</span>
+</div>
+</a>
+<a class="group flex items-center gap-2.5 px-3 py-2 rounded-lg text-text-secondary hover:bg-brand-blue-soft hover:text-brand-blue transition-colors cursor-pointer" href="master-data-akses.html">
+<span class="material-symbols-outlined text-[19px] text-text-muted group-hover:text-brand-blue transition-colors">database</span>
+<div class="sidebar-text flex flex-col min-w-0 transition-opacity duration-300">
+<span class="text-[13px] font-medium leading-tight group-hover:font-semibold">Master Data &amp; Akses</span>
+<span class="text-[10px] text-text-muted leading-tight group-hover:text-brand-blue/70">Data Referensi &amp; Hak Akses</span>
+</div>
+</a>
+<a class="group flex items-center gap-2.5 px-3 py-2 rounded-lg text-text-secondary hover:bg-brand-blue-soft hover:text-brand-blue transition-colors cursor-pointer" href="procurement.html">
+<span class="material-symbols-outlined text-[19px] text-text-muted group-hover:text-brand-blue transition-colors">shopping_cart</span>
+<div class="sidebar-text flex flex-col min-w-0 transition-opacity duration-300">
+<span class="text-[13px] font-medium leading-tight group-hover:font-semibold">Procurement</span>
+<span class="text-[10px] text-text-muted leading-tight group-hover:text-brand-blue/70">Pengadaan &amp; Pembelian</span>
+</div>
+</a>
+<a class="group flex items-center gap-2.5 px-3 py-2 rounded-lg text-text-secondary hover:bg-brand-blue-soft hover:text-brand-blue transition-colors cursor-pointer" href="warehouse-inventory.html">
+<span class="material-symbols-outlined text-[19px] text-text-muted group-hover:text-brand-blue transition-colors">warehouse</span>
+<div class="sidebar-text flex flex-col min-w-0 transition-opacity duration-300">
+<span class="text-[13px] font-medium leading-tight group-hover:font-semibold">Warehouse &amp; Inventory</span>
+<span class="text-[10px] text-text-muted leading-tight group-hover:text-brand-blue/70">Gudang &amp; Stok Semen</span>
+</div>
+</a>
+<a aria-current="page" class="flex items-center gap-2.5 px-3 py-2 rounded-lg transition-colors bg-brand-blue-soft text-brand-blue font-semibold border border-brand-blue-border/60 shadow-xs cursor-pointer" href="sales-commercial.html">
+<span class="material-symbols-outlined text-[19px] text-brand-blue">point_of_sale</span>
+<div class="sidebar-text flex flex-col min-w-0 transition-opacity duration-300">
+<span class="text-[13px] leading-tight font-semibold">Sales &amp; Commercial</span>
+<span class="text-[10px] text-brand-blue/70 font-normal leading-tight">Penjualan &amp; SF TIRO</span>
+</div>
+</a>
+<a class="group flex items-center gap-2.5 px-3 py-2 rounded-lg text-text-secondary hover:bg-brand-blue-soft hover:text-brand-blue transition-colors cursor-pointer" href="distribution-planning.html">
+<span class="material-symbols-outlined text-[19px] text-text-muted group-hover:text-brand-blue transition-colors">local_shipping</span>
+<div class="sidebar-text flex flex-col min-w-0 transition-opacity duration-300">
+<span class="text-[13px] font-medium leading-tight group-hover:font-semibold">Distribution Planning</span>
+<span class="text-[10px] text-text-muted leading-tight group-hover:text-brand-blue/70">Rencana &amp; Pengiriman</span>
+</div>
+</a>
+<a class="group flex items-center gap-2.5 px-3 py-2 rounded-lg text-text-secondary hover:bg-brand-blue-soft hover:text-brand-blue transition-colors cursor-pointer" href="finance-accounting.html">
+<span class="material-symbols-outlined text-[19px] text-text-muted group-hover:text-brand-blue transition-colors">receipt_long</span>
+<div class="sidebar-text flex flex-col min-w-0 transition-opacity duration-300">
+<span class="text-[13px] font-medium leading-tight group-hover:font-semibold">Finance &amp; Accounting</span>
+<span class="text-[10px] text-text-muted leading-tight group-hover:text-brand-blue/70">Faktur, Piutang &amp; Hutang</span>
+</div>
+</a>
+<a class="group flex items-center gap-2.5 px-3 py-2 rounded-lg text-text-secondary hover:bg-brand-blue-soft hover:text-brand-blue transition-colors cursor-pointer" href="tax-reporting.html">
+<span class="material-symbols-outlined text-[19px] text-text-muted group-hover:text-brand-blue transition-colors">account_balance</span>
+<div class="sidebar-text flex flex-col min-w-0 transition-opacity duration-300">
+<span class="text-[13px] font-medium leading-tight group-hover:font-semibold">Tax Reporting</span>
+<span class="text-[10px] text-text-muted leading-tight group-hover:text-brand-blue/70">Pelaporan Pajak &amp; Faktur</span>
+</div>
+</a>
+<a class="group flex items-center gap-2.5 px-3 py-2 rounded-lg text-text-secondary hover:bg-brand-blue-soft hover:text-brand-blue transition-colors cursor-pointer" href="controlled-upload.html">
+<span class="material-symbols-outlined text-[19px] text-text-muted group-hover:text-brand-blue transition-colors">file_upload</span>
+<div class="sidebar-text flex flex-col min-w-0 transition-opacity duration-300">
+<span class="text-[13px] font-medium leading-tight group-hover:font-semibold">Controlled Upload</span>
+<span class="text-[10px] text-text-muted leading-tight group-hover:text-brand-blue/70">Upload Template Excel</span>
+</div>
+</a>
+</nav>
+<div id="sidebar-footer" class="p-3 border-t border-border-subtle bg-slate-50/70">
+<div class="flex items-center justify-between text-[11px] text-text-muted">
+<span class="font-mono">v3.12.0 (Terminal SBY)</span>
+<span class="px-1.5 py-0.5 rounded bg-emerald-50 text-success-deep font-semibold border border-success-border text-[10px]">ONLINE</span>
+</div>
+</div>
+</div>
+</aside>
+<!-- Content Container -->
+<div id="app-content" class="pl-64 flex flex-col min-h-screen transition-all duration-300">
+<!-- Topbar / Header -->
+<header id="app-header" class="fixed top-0 left-64 right-0 h-16 bg-white border-b border-border-subtle shadow-xs z-40 px-6 flex items-center justify-between transition-all duration-300">
+<div class="flex items-center gap-4 flex-1 max-w-2xl">
+<button id="sidebar-toggle" class="p-1.5 rounded-lg hover:bg-slate-100 text-text-muted transition-colors flex items-center justify-center cursor-pointer" type="button">
+<span class="material-symbols-outlined text-[20px]">menu</span>
+</button>
+<!-- Breadcrumb / Unit -->
+<div class="flex items-center gap-1.5 text-[#64748B] text-[13px] shrink-0 font-medium">
+<span class="material-symbols-outlined text-[18px] text-[#94A3B8]">domain</span>
+<span class="font-semibold text-[#0F172A]">Depo Utama</span>
+<span class="text-[#CBD5E1]">/</span>
+<span class="text-[#475569]">Gudang Semen Curah &amp; Gudang Zak</span>
+</div>
+<!-- Search Input -->
+<div class="relative flex-1">
+<span class="material-symbols-outlined absolute left-2.5 top-1/2 -translate-y-1/2 text-[17px] text-[#94A3B8]">search</span>
+<input class="w-full h-8 pl-8 pr-3 bg-slate-50 hover:bg-slate-100/70 focus:bg-white rounded border border-[#E2E8F0] focus:border-[#1E3A8A] text-[#0F172A] text-[12px] focus:outline-none transition-all placeholder:text-[#94A3B8]" placeholder="Cari No DO, SO, Surat Jalan, SKU..." type="text">
+</div>
+</div>
+<!-- Right Header Actions -->
+<div class="flex items-center gap-4">
+<!-- TIRO Sync Badge -->
+<div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-[#DCFCE7] border border-[#BBF7D0] text-[#15803D] text-[11px] font-semibold">
+<span class="w-2 h-2 rounded-full bg-[#15803D] animate-pulse"></span>
+<span class="">TIRO Sync: Online</span>
+</div>
+<!-- Notifications Dropdown -->
+<div class="relative group">
+<button class="relative p-1.5 rounded hover:bg-slate-100 text-[#64748B] hover:text-[#0F172A] transition-colors flex items-center justify-center cursor-pointer" type="button">
+<span class="material-symbols-outlined text-[20px]">notifications</span>
+<span class="absolute top-1 right-1 w-2 h-2 bg-[#DC2626] rounded-full ring-2 ring-white"></span>
+</button>
+<div class="hidden group-hover:flex flex-col absolute right-0 top-full mt-1 w-80 bg-white border border-[#E2E8F0] rounded-xl shadow-lg py-2 z-50">
+<div class="px-4 py-2 flex items-center justify-between border-b border-[#E2E8F0]">
+<span class="text-[13px] font-semibold text-[#0F172A]">Notifikasi Operasional</span>
+<span class="text-[11px] text-[#1E3A8A] font-semibold bg-blue-50 px-2 py-0.5 rounded">3 Baru</span>
+</div>
+<div class="divide-y divide-slate-100 text-[12px]">
+<div class="p-3 hover:bg-slate-50">
+<p class="font-medium text-[#0F172A]">Gudang Bitung mencapai 88% kapasitas</p>
+<span class="text-[10px] text-[#94A3B8]">10 menit lalu</span>
+</div>
+<div class="p-3 hover:bg-slate-50">
+<p class="font-medium text-[#0F172A]">DO-PAD-2024-889 telah selesai dimuat ke armada</p>
+<span class="text-[10px] text-[#94A3B8]">25 menit lalu</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Profil Admin -->
+<div class="flex items-center gap-2.5 pl-3 border-l border-[#E2E8F0]">
+<div class="w-8 h-8 rounded-full bg-[#1E3A8A] text-white flex items-center justify-center font-semibold text-[12px] ring-1 ring-[#E2E8F0]">
+            BS
+          </div>
+<div class="flex flex-col leading-tight">
+<span class="text-[13px] font-semibold text-[#0F172A]">Budi Santoso</span>
+<span class="text-[10px] font-medium text-[#64748B]">Admin Operasional</span>
+</div>
+</div>
+</div>
+</header>
+<!-- Main Content -->
+<main class="relative pt-20 px-6 pb-10 flex-1 space-y-6">
+  <!-- Title and Header -->
+  <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+    <div class="flex items-center gap-3">
+      <div class="p-2 bg-brand-blue text-white rounded-lg shadow-sm"><span class="material-symbols-outlined text-[24px]">point_of_sale</span></div>
+      <div>
+        <div class="flex items-center gap-2">
+          <h1 class="text-[24px] font-bold tracking-tight text-[#0F172A]">Order Komersial & Verifikasi Plafon</h1>
+          <span class="inline-flex items-center px-2 py-0.5 rounded text-[11px] font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200">Live TIRO Gateway</span>
+        </div>
+        <p class="text-[13px] text-[#475569] mt-0.5">Sinkronisasi otomatis Sales Form TIRO (SFA) & antrean validasi kelayakan kredit distribusi semen</p>
+      </div>
+    </div>
+    <div class="flex items-center gap-2.5 shrink-0">
+      <button class="h-9 px-4 border border-slate-300 bg-white hover:bg-slate-50 text-[#334155] hover:text-slate-900 rounded-lg text-[13px] font-medium shadow-xs transition-colors flex items-center gap-1.5 cursor-pointer" type="button">
+        <span class="material-symbols-outlined text-[18px] text-slate-500">sync</span>
+        <span>Tarik Manual SF TIRO</span>
+      </button>
+      <button class="h-9 px-4 bg-[#1E3A8A] hover:bg-blue-800 text-white rounded-lg text-[13px] font-medium shadow-sm transition-colors flex items-center gap-1.5 cursor-pointer" type="button">
+        <span class="material-symbols-outlined text-[18px]">add_circle</span>
+        <span>Entry Form Manual</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- KPI Cards -->
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+    <!-- Card 1 -->
+    <div class="bg-white border border-[#E2E8F0] p-4 rounded-xl shadow-sm flex flex-col justify-between">
+      <div class="flex items-center justify-between">
+        <span class="text-[11px] uppercase tracking-wider text-[#94A3B8] font-bold">TOTAL SALES FORM (HARI INI)</span>
+        <div class="p-1.5 bg-blue-50 text-[#1E3A8A] rounded-lg">
+          <span class="material-symbols-outlined text-[18px]">receipt</span>
+        </div>
+      </div>
+      <div class="my-3 flex items-baseline gap-2">
+        <span class="text-[28px] font-bold text-[#0F172A] tracking-tight font-mono">42</span>
+        <span class="text-[13px] font-semibold text-[#475569]">Order Masuk</span>
+        <span class="text-[12px] font-bold text-emerald-600 ml-auto">+8 dari kemarin</span>
+      </div>
+      <div class="flex gap-2">
+        <div class="flex-1 bg-slate-50 border border-slate-200 rounded p-1.5 text-center"><span class="text-[11px] font-semibold text-slate-600 font-mono">38 Via TIRO SFA</span></div>
+        <div class="flex-1 bg-slate-50 border border-slate-200 rounded p-1.5 text-center"><span class="text-[11px] font-semibold text-slate-600 font-mono">4 Fallback Manual</span></div>
+      </div>
+    </div>
+    
+    <!-- Card 2 -->
+    <div class="bg-white border border-[#E2E8F0] p-4 rounded-xl shadow-sm flex flex-col justify-between">
+      <div class="flex items-center justify-between">
+        <span class="text-[11px] uppercase tracking-wider text-[#94A3B8] font-bold">NILAI GROSS SALES (HARI INI)</span>
+        <div class="p-1.5 bg-blue-50 text-[#1E3A8A] rounded-lg">
+          <span class="material-symbols-outlined text-[18px]">payments</span>
+        </div>
+      </div>
+      <div class="my-3 flex items-baseline gap-1.5">
+        <span class="text-[20px] font-bold text-[#0F172A]">Rp</span>
+        <span class="text-[28px] font-bold text-[#0F172A] tracking-tight font-mono">1.482,60</span>
+        <span class="text-[13px] font-semibold text-[#475569]">Juta</span>
+        <span class="text-[11px] text-[#64748B] ml-auto font-medium">Target: Rp 1.900 Juta (78%)</span>
+      </div>
+      <div class="w-full bg-slate-100 rounded-full h-2.5 overflow-hidden border border-slate-200">
+        <div class="bg-[#1E3A8A] h-2.5 rounded-full" style="width: 78%;"></div>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="bg-white border border-red-200 p-4 rounded-xl shadow-sm flex flex-col justify-between">
+      <div class="flex items-center justify-between">
+        <span class="text-[11px] uppercase tracking-wider text-red-500 font-bold">MENUNGGU OTORISASI PLAFON</span>
+        <div class="p-1.5 bg-red-50 text-red-600 rounded-lg border border-red-100">
+          <span class="material-symbols-outlined text-[18px]">warning</span>
+        </div>
+      </div>
+      <div class="my-3 flex justify-between items-baseline">
+        <div>
+          <span class="text-[28px] font-bold text-red-600 tracking-tight font-mono">5</span>
+          <span class="text-[13px] font-semibold text-red-600 ml-1">Form Terhambat</span>
+        </div>
+        <span class="text-[14px] font-bold text-red-600 font-mono">Rp 312,4 Juta</span>
+      </div>
+      <div class="bg-red-50 text-red-600 text-[11px] font-semibold p-1.5 rounded text-center border border-red-100">Spv Kredit / Finance Action Required</div>
+    </div>
+  </div>
+
+  <!-- Main Split Layout -->
+  <div class="flex flex-col lg:flex-row gap-6 items-start">
+    
+    <!-- Left Column: Queue List -->
+    <div class="w-full lg:w-2/3 bg-white border border-[#E2E8F0] rounded-xl shadow-sm flex flex-col overflow-hidden">
+      <div class="p-4 border-b border-[#E2E8F0] flex items-center justify-between">
+        <div class="flex items-center gap-2">
+          <h2 class="text-[16px] font-bold text-[#0F172A]">Daftar Antrean Sales Form</h2>
+          <span class="px-2 py-0.5 bg-slate-100 text-slate-600 text-[11px] font-bold rounded">6 Aktif</span>
+        </div>
+        <div class="flex items-center gap-1 hidden sm:flex">
+           <button class="px-3 py-1.5 text-[12px] font-bold text-[#1E3A8A] border-b-2 border-[#1E3A8A] cursor-pointer">Semua (42)</button>
+           <button class="px-3 py-1.5 text-[12px] font-medium text-slate-500 hover:text-slate-800 cursor-pointer">Eligible (37)</button>
+           <button class="px-3 py-1.5 text-[12px] font-medium text-red-500 hover:text-red-700 cursor-pointer">Limit Exceeded (5)</button>
+           <div class="w-px h-4 bg-slate-200 mx-2"></div>
+           <button class="px-3 py-1.5 text-[12px] font-medium text-slate-400 flex items-center gap-1 cursor-not-allowed"><span class="material-symbols-outlined text-[14px]">lock</span> Manual Entry</button>
+        </div>
+      </div>
+      <div class="overflow-x-auto">
+        <table class="w-full text-left">
+          <thead class="bg-slate-50 border-b border-[#E2E8F0] text-[10px] font-bold text-[#64748B] uppercase tracking-wider">
+            <tr>
+              <th class="p-3 pl-5">NO SF & WAKTU</th>
+              <th class="p-3">PELANGGAN / PROYEK</th>
+              <th class="p-3 text-center">SUMBER</th>
+              <th class="p-3">SKU & TONASE</th>
+              <th class="p-3 text-right">NILAI PESANAN</th>
+              <th class="p-3 text-right pr-5">SISA PLAFON</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-100 text-[12px]">
+            <!-- Active Row -->
+            <tr class="bg-blue-50/40 relative cursor-pointer hover:bg-blue-50/70 transition-colors">
+              <td class="p-3 pl-5 align-top">
+                <div class="absolute left-0 top-0 bottom-0 w-1 bg-[#1E3A8A]"></div>
+                <div class="font-bold text-[#1E3A8A] font-mono">SF-20231024-0089</div>
+                <div class="text-[10px] text-slate-500 mt-1">Hari ini,<br>09:42 WIB</div>
+              </td>
+              <td class="p-3 align-top">
+                <div class="font-bold text-slate-900 text-[13px]">TB Sumber Rejeki Makmur</div>
+                <div class="text-[10px] text-slate-500 mt-1 font-mono">ID: CUST-SBY-0412 • Retail</div>
+              </td>
+              <td class="p-3 align-top text-center">
+                <span class="inline-block border border-blue-200 text-[#1E3A8A] text-[10px] font-bold px-2 py-0.5 rounded bg-white">TIRO SFA</span>
+              </td>
+              <td class="p-3 align-top">
+                <div class="font-bold text-slate-900">PCC 40kg (Zak)</div>
+                <div class="font-mono text-slate-700 font-semibold mt-1">25.00 Ton</div>
+              </td>
+              <td class="p-3 align-top text-right font-bold text-slate-900 font-mono text-[13px]">
+                Rp 31.875.000
+              </td>
+              <td class="p-3 pr-5 align-top text-right">
+                <div class="font-bold text-emerald-600 font-mono text-[13px]">Rp 68.125.000</div>
+                <div class="text-[10px] text-slate-400 mt-1 font-mono">Plafon: 100 Juta</div>
+              </td>
+            </tr>
+            <!-- Overlimit Row -->
+            <tr class="hover:bg-slate-50 transition-colors cursor-pointer">
+              <td class="p-3 pl-5 align-top">
+                <div class="font-bold text-[#1E3A8A] font-mono">SF-20231024-0088</div>
+                <div class="text-[10px] text-slate-500 mt-1">Hari ini,<br>09:30 WIB</div>
+              </td>
+              <td class="p-3 align-top">
+                <div class="font-bold text-slate-900 text-[13px]">PT Jaya Abadi Infrastruktur</div>
+                <div class="text-[10px] text-slate-500 mt-1 font-mono">ID: CUST-MLG-0109 • Batch...</div>
+              </td>
+              <td class="p-3 align-top text-center">
+                <span class="inline-block border border-blue-200 text-[#1E3A8A] text-[10px] font-bold px-2 py-0.5 rounded bg-white">TIRO SFA</span>
+              </td>
+              <td class="p-3 align-top">
+                <div class="font-bold text-slate-900">OPC Curah Tipe I</div>
+                <div class="font-mono text-slate-700 font-semibold mt-1">60.00 Ton</div>
+              </td>
+              <td class="p-3 align-top text-right font-bold text-slate-900 font-mono text-[13px]">
+                Rp 76.800.000
+              </td>
+              <td class="p-3 pr-5 align-top text-right">
+                <div class="font-bold text-red-600 font-mono text-[13px]">Rp -16.800.000</div>
+                <div class="text-[10px] text-red-500 mt-1 font-semibold">Overlimit Plafon</div>
+              </td>
+            </tr>
+            <!-- Row 3 -->
+            <tr class="hover:bg-slate-50 transition-colors cursor-pointer">
+              <td class="p-3 pl-5 align-top">
+                <div class="font-bold text-[#1E3A8A] font-mono">SF-20231024-0085</div>
+                <div class="text-[10px] text-slate-500 mt-1">Hari ini,<br>09:12 WIB</div>
+              </td>
+              <td class="p-3 align-top">
+                <div class="font-bold text-slate-900 text-[13px]">UD Berkah Abadi Logistik</div>
+                <div class="text-[10px] text-slate-500 mt-1 font-mono">ID: CUST-SDA-0082 • Proyek</div>
+              </td>
+              <td class="p-3 align-top text-center">
+                <div class="text-[10px] font-bold text-slate-500">Manual Entry</div>
+                <div class="text-[9px] bg-slate-100 text-slate-500 px-1 py-0.5 rounded mt-1 border border-slate-200">Fallback - Spv</div>
+              </td>
+              <td class="p-3 align-top">
+                <div class="font-bold text-slate-900">PCC 50kg (Zak)</div>
+                <div class="font-mono text-slate-700 font-semibold mt-1">15.00 Ton</div>
+              </td>
+              <td class="p-3 align-top text-right font-bold text-slate-900 font-mono text-[13px]">
+                Rp 20.400.000
+              </td>
+              <td class="p-3 pr-5 align-top text-right">
+                <div class="font-bold text-emerald-600 font-mono text-[13px]">Rp 29.600.000</div>
+                <div class="text-[10px] text-slate-400 mt-1 font-mono">Plafon: 50 Juta</div>
+              </td>
+            </tr>
+            <!-- Row 4 -->
+            <tr class="hover:bg-slate-50 transition-colors cursor-pointer">
+              <td class="p-3 pl-5 align-top">
+                <div class="font-bold text-[#1E3A8A] font-mono">SF-20231024-0084</div>
+                <div class="text-[10px] text-slate-500 mt-1">Hari ini,<br>08:55 WIB</div>
+              </td>
+              <td class="p-3 align-top">
+                <div class="font-bold text-slate-900 text-[13px]">PT Beton Prima Nusantara</div>
+                <div class="text-[10px] text-slate-500 mt-1 font-mono">ID: CUST-GRS-0044 • Kontraktor</div>
+              </td>
+              <td class="p-3 align-top text-center">
+                <span class="inline-block border border-blue-200 text-[#1E3A8A] text-[10px] font-bold px-2 py-0.5 rounded bg-white">TIRO SFA</span>
+              </td>
+              <td class="p-3 align-top">
+                <div class="font-bold text-slate-900">Semen Tipe V Curah</div>
+                <div class="font-mono text-slate-700 font-semibold mt-1">100.00 Ton</div>
+              </td>
+              <td class="p-3 align-top text-right font-bold text-slate-900 font-mono text-[13px]">
+                Rp 128.700.000
+              </td>
+              <td class="p-3 pr-5 align-top text-right">
+                <div class="font-bold text-emerald-600 font-mono text-[13px]">Rp 218.300.000</div>
+                <div class="text-[10px] text-slate-400 mt-1 font-mono">Plafon: 500 Juta</div>
+              </td>
+            </tr>
+            <!-- Row 5 (Overlimit) -->
+            <tr class="hover:bg-slate-50 transition-colors cursor-pointer">
+              <td class="p-3 pl-5 align-top">
+                <div class="font-bold text-[#1E3A8A] font-mono">SF-20231024-0081</div>
+                <div class="text-[10px] text-slate-500 mt-1">Hari ini,<br>08:20 WIB</div>
+              </td>
+              <td class="p-3 align-top">
+                <div class="font-bold text-slate-900 text-[13px]">Toko Bangunan Sarana</div>
+                <div class="text-[10px] text-slate-500 mt-1 font-mono">ID: CUST-KDR-0312 • Retail</div>
+              </td>
+              <td class="p-3 align-top text-center">
+                <span class="inline-block border border-blue-200 text-[#1E3A8A] text-[10px] font-bold px-2 py-0.5 rounded bg-white">TIRO SFA</span>
+              </td>
+              <td class="p-3 align-top">
+                <div class="font-bold text-slate-900">PCC 40kg (Zak)</div>
+                <div class="font-mono text-slate-700 font-semibold mt-1">30.00 Ton</div>
+              </td>
+              <td class="p-3 align-top text-right font-bold text-slate-900 font-mono text-[13px]">
+                Rp 38.250.000
+              </td>
+              <td class="p-3 pr-5 align-top text-right">
+                <div class="font-bold text-red-600 font-mono text-[13px]">Rp -4.150.000</div>
+                <div class="text-[10px] text-red-500 mt-1 font-semibold">Overlimit Plafon</div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="p-3 border-t border-[#E2E8F0] bg-slate-50 flex items-center justify-between text-[11px] text-slate-500">
+        <div>Menampilkan 1 - 5 dari 42 data <span class="mx-2 text-slate-300">|</span> Batch ID: BTH-SBY-20231024-1</div>
+        <div class="flex items-center gap-1 font-bold">
+          <button class="w-7 h-7 flex items-center justify-center bg-white border border-slate-200 rounded hover:bg-slate-100 cursor-pointer">&lt;</button>
+          <button class="w-7 h-7 flex items-center justify-center bg-[#1E3A8A] text-white rounded shadow-sm">1</button>
+          <button class="w-7 h-7 flex items-center justify-center bg-white border border-slate-200 rounded hover:bg-slate-100 cursor-pointer text-slate-700">2</button>
+          <button class="w-7 h-7 flex items-center justify-center bg-white border border-slate-200 rounded hover:bg-slate-100 cursor-pointer">&gt;</button>
+        </div>
+      </div>
+      <div class="p-3.5 border-t border-[#E2E8F0] bg-white flex items-center justify-between">
+         <div class="flex items-center gap-2 text-[12px] text-slate-500">
+           <span class="material-symbols-outlined text-[18px]">info</span>
+           Status kesiapan pengiriman untuk pesanan hari ini
+         </div>
+         <a href="#" class="text-[12px] font-semibold text-[#1E3A8A] hover:underline flex items-center gap-1">Lihat di Distribution Planning <span class="material-symbols-outlined text-[16px]">arrow_forward</span></a>
+      </div>
+    </div>
+
+    <!-- Right Column: Verification Detail -->
+    <div class="w-full lg:w-1/3 bg-white border border-blue-200 rounded-xl shadow-md flex flex-col flex-shrink-0">
+       <div class="p-4 border-b border-blue-100 bg-blue-50/70 rounded-t-xl flex items-center gap-3">
+         <div class="p-2 bg-white border border-blue-200 rounded-lg shadow-sm">
+           <span class="material-symbols-outlined text-[20px] text-[#1E3A8A]">fact_check</span>
+         </div>
+         <div>
+           <h3 class="text-[16px] font-bold text-[#0F172A]">Verifikasi Sales Form</h3>
+           <div class="text-[12px] font-mono font-bold text-slate-500 mt-0.5">SF-20231024-0089</div>
+         </div>
+       </div>
+       
+       <div class="p-5 flex-1 space-y-6">
+         <!-- Customer Info -->
+         <div>
+           <div class="flex items-center justify-between mb-1.5">
+             <span class="text-[10px] font-bold text-slate-400 uppercase tracking-wider">PELANGGAN TERDAFTAR</span>
+             <span class="text-[9px] font-bold text-emerald-700 bg-emerald-100 px-2 py-0.5 rounded tracking-wide border border-emerald-200">STATUS: AKTIF</span>
+           </div>
+           <div class="font-bold text-[15px] text-slate-900 mt-1">TB Sumber Rejeki Makmur</div>
+           <div class="text-[11px] text-slate-500 mt-1">Jl. Raya Kenjeran No. 124, Kota Surabaya</div>
+           <div class="mt-3 text-[11px] flex flex-col sm:flex-row justify-between bg-slate-50 p-2.5 rounded-lg border border-slate-200 gap-2">
+             <div><span class="text-slate-400">Salesperson:</span><br><span class="font-semibold text-slate-700">Aris Pratama (TIRO)</span></div>
+             <div class="sm:text-right"><span class="text-slate-400">NPWP:</span><br><span class="font-mono font-semibold text-slate-700">01.382.991.2-604</span></div>
+           </div>
+         </div>
+
+         <!-- SKU -->
+         <div>
+           <div class="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-2">SKU & ALOKASI MUAT GUDANG</div>
+           <div class="flex items-start justify-between bg-white border border-slate-200 p-3 rounded-lg shadow-sm">
+             <div>
+               <div class="font-bold text-[14px] text-slate-900">Semen Portland Pozzolan (PCC)</div>
+               <div class="text-[11px] text-slate-500 mt-0.5 font-medium">Kemasan 40kg • Depo Gresik</div>
+             </div>
+             <div class="text-right">
+               <div class="font-mono font-bold text-[18px] text-slate-900 tracking-tight">25.00</div>
+               <div class="text-[12px] font-semibold text-slate-500">Ton</div>
+             </div>
+           </div>
+         </div>
+
+         <!-- Pricing -->
+         <div>
+           <div class="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-2">STRUKTUR HARGA & PROGRAM SEMEN</div>
+           <div class="space-y-2.5 text-[12px]">
+             <div class="flex justify-between items-center">
+               <span class="text-slate-600 font-medium">Harga Dasar Loco/Fca</span>
+               <span class="font-mono font-bold text-slate-900"><span class="text-slate-400 mr-1 text-[10px]">Rp</span>1.275.000</span>
+             </div>
+             <div class="flex justify-between items-center">
+               <span class="text-slate-600 font-medium flex items-center gap-1">Rabat Volume Semen <span class="material-symbols-outlined text-[14px] text-slate-400 cursor-help" title="Diskon qty besar">info</span></span>
+               <span class="font-mono font-bold text-red-600">- <span class="text-red-400 mr-1 text-[10px]">Rp</span>15.000</span>
+             </div>
+             <div class="flex justify-between items-center pb-3 border-b border-slate-200">
+               <span class="text-slate-600 font-medium">Diskon Program TIRO</span>
+               <span class="font-mono font-bold text-red-600">- <span class="text-red-400 mr-1 text-[10px]">Rp</span>5.000</span>
+             </div>
+             <div class="flex justify-between items-center pt-1">
+               <span class="text-slate-600 font-medium">Syarat Pembayaran (TOP)</span>
+               <select class="text-[12px] font-semibold text-slate-800 bg-slate-50 border border-slate-300 rounded px-2 py-1.5 outline-none cursor-pointer focus:border-[#1E3A8A] focus:ring-1 focus:ring-[#1E3A8A]">
+                 <option>TOP 14 Hari (Kredit)</option>
+                 <option>CBD (Cash Before Delivery)</option>
+               </select>
+             </div>
+           </div>
+         </div>
+
+         <!-- Credit Check -->
+         <div class="bg-emerald-50/70 border border-emerald-200 rounded-lg p-4 shadow-sm relative overflow-hidden">
+           <div class="absolute right-0 top-0 w-16 h-16 bg-emerald-100 rounded-bl-full -z-10 opacity-50"></div>
+           <div class="flex items-center justify-between mb-3">
+             <span class="text-[12px] font-bold text-slate-800">Validasi Plafon & Piutang Berjalan</span>
+             <span class="text-[10px] font-bold text-emerald-700 bg-emerald-100 px-2 py-1 rounded border border-emerald-200 tracking-wide">LULUS CEK</span>
+           </div>
+           <div class="space-y-2 text-[12px]">
+             <div class="flex justify-between">
+               <span class="text-slate-600">Limit Plafon Disetujui:</span>
+               <span class="font-mono font-bold text-slate-900">Rp 100.000.000</span>
+             </div>
+             <div class="flex justify-between">
+               <span class="text-slate-600">Sisa Plafon Saat Ini:</span>
+               <span class="font-mono font-bold text-slate-900">Rp 68.125.000</span>
+             </div>
+             <div class="flex justify-between font-bold">
+               <span class="text-slate-800">Nilai Order Baru (Term. PPN):</span>
+               <span class="font-mono text-[#1E3A8A]">Rp 31.875.000</span>
+             </div>
+           </div>
+           <div class="mt-4">
+             <div class="w-full bg-slate-200 rounded-full h-2 overflow-hidden flex">
+               <div class="bg-slate-400 h-2" style="width: 31.8%" title="Penggunaan Awal: 31.8%"></div>
+               <div class="bg-emerald-500 h-2" style="width: 31.8%" title="Order Baru: 31.8%"></div>
+             </div>
+             <div class="flex justify-between text-[10px] font-medium text-slate-500 mt-1.5">
+               <span>Penggunaan: 31.8%</span>
+               <span>Proyeksi Sisa: <span class="font-mono font-bold">Rp 36.250.000</span></span>
+             </div>
+           </div>
+         </div>
+       </div>
+
+       <!-- Action Area -->
+       <div class="p-5 border-t border-blue-200 bg-slate-50 rounded-b-xl">
+         <div class="flex flex-col sm:flex-row sm:justify-between sm:items-end mb-4 gap-2">
+           <div class="text-[10px] font-bold text-slate-400 uppercase tracking-wider leading-relaxed">TOTAL SALES ORDER<br>Termasuk PPN 11% & Biaya Bongkar</div>
+           <div class="text-right">
+             <span class="text-[16px] font-bold text-[#1E3A8A]">Rp</span>
+             <span class="text-[28px] font-bold text-[#1E3A8A] tracking-tight ml-1 font-mono">31.875.000</span>
+           </div>
+         </div>
+         <div class="space-y-2.5">
+           <button class="w-full h-11 bg-[#1E3A8A] hover:bg-blue-800 text-white font-bold text-[14px] rounded-lg shadow-sm transition-colors flex items-center justify-center gap-2 cursor-pointer" type="button" onclick="alert('Sales Order Berhasil Dibuat dan diteruskan ke modul Distribution Planning!')">
+             <span class="material-symbols-outlined text-[20px]">verified</span> Konversi ke Sales Order Resmi
+           </button>
+           <div class="flex gap-2.5">
+             <button class="flex-1 h-10 bg-white border border-slate-300 hover:bg-slate-100 text-slate-700 font-bold text-[13px] rounded-lg transition-colors cursor-pointer" type="button">Hold Antrean</button>
+             <button class="flex-1 h-10 bg-white border border-red-200 hover:bg-red-50 text-red-600 font-bold text-[13px] rounded-lg transition-colors cursor-pointer" type="button">Tolak Order</button>
+           </div>
+         </div>
+         <div class="text-[11px] text-center text-slate-500 font-medium mt-4">Target Auto-SO: <span class="font-mono font-bold text-slate-700">SO-20231024-0418</span> (Automated by ERP-PAD)</div>
+       </div>
+    </div>
+  </div>
+
+  <!-- SOP Footer Banner -->
+  <div class="flex flex-col md:flex-row md:items-center justify-between p-4 bg-white border border-[#E2E8F0] rounded-xl shadow-sm gap-4">
+    <div class="flex flex-col md:flex-row md:items-center gap-4 md:gap-6">
+      <span class="text-[11px] font-bold text-slate-400 uppercase tracking-wider shrink-0">SOP DISTRIBUSI:</span>
+      <div class="flex flex-wrap items-center gap-3 text-[12px] font-medium text-slate-600">
+        <div class="flex items-center gap-2"><span class="w-5 h-5 flex items-center justify-center bg-[#1E3A8A] text-white rounded-full text-[10px] font-bold">1</span> Sales Form TIRO Terverifikasi</div>
+        <span class="material-symbols-outlined text-[18px] text-slate-300">chevron_right</span>
+        <div class="flex items-center gap-2 text-[#1E3A8A] font-bold"><span class="w-5 h-5 flex items-center justify-center bg-[#1E3A8A] text-white rounded-full text-[10px] font-bold">2</span> Sales Order Resmi (SO) Terbit</div>
+        <span class="material-symbols-outlined text-[18px] text-slate-300">chevron_right</span>
+        <div class="flex items-center gap-2 text-slate-400"><span class="w-5 h-5 flex items-center justify-center bg-slate-200 text-slate-500 rounded-full text-[10px] font-bold">3</span> Delivery Order (DO) & Penugasan</div>
+      </div>
+    </div>
+    <div class="text-[11px] font-bold text-[#1E3A8A] md:border-l border-slate-200 md:pl-4">SLA Proses SO Komersial: &lt; 15 Menit</div>
+  </div>
+</main>
+<script src="../js/script.js"></script>
+</body>
+</html>
