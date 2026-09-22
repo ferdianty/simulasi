@@ -30,7 +30,7 @@
         <span class="material-symbols-outlined text-[19px] text-brand-blue">space_dashboard</span>
         <div class="sidebar-text flex flex-col min-w-0 transition-opacity duration-300">
           <span class="text-[13px] leading-tight">Dashboard</span>
-          <span class="text-[10px] text-brand-blue/70 font-normal leading-tight">Ringkasan Harian</span>
+          <span class="text-[10px] text-brand-blue/70 font-normal leading-tight">Ringkasan harian</span>
         </div>
       </a>
       <a class="group flex items-center gap-2.5 px-3 py-2 rounded-lg text-text-secondary hover:bg-brand-blue-soft hover:text-brand-blue transition-colors" data-path="master-data-&amp;-akses" href="master-data-akses.html">
@@ -197,7 +197,7 @@
           <div class="flex items-center bg-slate-50 border border-border-subtle rounded px-2.5 py-1 gap-1.5">
             <span class="material-symbols-outlined text-[16px] text-text-muted">date_range</span>
             <span class="text-[11px] text-text-muted font-medium uppercase tracking-wider">Periode:</span>
-            <select class="bg-transparent text-xs text-text-main font-semibold focus:outline-none cursor-pointer pr-1 py-1.5">
+            <select class="bg-transparent text-xs text-text-main font-semibold outline-none focus:outline-none focus:ring-0 border-none cursor-pointer pr-8 py-1.5">
               <option value="hari-ini">Hari Ini (24 Okt 2024)</option>
               <option value="minggu-ini">Minggu Berjalan (W43)</option>
               <option value="bulan-ini">Bulan Oktober 2024</option>
@@ -356,8 +356,32 @@
               <div class="relative z-10 w-full h-full flex flex-col justify-end">
                 <div class="h-44 w-full flex items-end justify-around gap-2 px-1 pb-0">
                   
-                  <div class="flex flex-col items-center gap-2 flex-1 h-full justify-end chart-bar-col"
+                  <div class="flex flex-col items-center gap-2 flex-1 h-full justify-end chart-bar-col relative group cursor-pointer"
                        data-date="18 Okt 2024" data-shift="Shift 1 & 2" data-out="2.340 Ton" data-in="2.600 Ton" data-surplus="+260 Ton" data-surplus-color="text-emerald-400">
+
+                    <!-- Pure CSS Tooltip -->
+                    <div class="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 bg-white border border-[#E2E8F0] shadow-lg rounded-lg p-3 w-48 z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 pointer-events-none">
+                      <div class="flex items-center justify-between mb-1.5 pb-1.5 border-b border-[#E2E8F0]">
+                        <span class="text-[12px] font-bold text-[#0F172A]">18 Okt 2024</span>
+                        
+                      </div>
+                      <div class="flex flex-col gap-1">
+                        <div class="flex items-center justify-between text-[11px]">
+                          <span class="text-[#475569] flex items-center gap-1"><span class="w-2 h-2 rounded-sm bg-slate-400"></span>Masuk</span>
+                          <span class="font-mono font-bold text-[#0F172A]">2.600 Ton</span>
+                        </div>
+                        <div class="flex items-center justify-between text-[11px]">
+                          <span class="text-[#475569] flex items-center gap-1"><span class="w-2 h-2 rounded-sm bg-brand-blue"></span>Keluar</span>
+                          <span class="font-mono font-bold text-[#0F172A]">2.340 Ton</span>
+                        </div>
+                        <div class="flex items-center justify-between text-[11px] mt-1 pt-1 border-t border-[#E2E8F0] border-dashed">
+                          <span class="text-[#475569]">Selisih</span>
+                          <span class="font-mono font-bold text-emerald-400">+260 Ton</span>
+                        </div>
+                      </div>
+                      <div class="absolute -bottom-1.5 left-1/2 -translate-x-1/2 w-3 h-3 bg-white border-b border-r border-[#E2E8F0] rotate-45"></div>
+                    </div>
+
                     <div class="flex items-end gap-1.5 h-full w-full justify-center">
                       <div class="w-5 bg-brand-blue rounded-t-xs transition-all shadow-xs" style="height: 52%;"></div>
                       <div class="w-5 bg-slate-400 rounded-t-xs transition-all shadow-xs" style="height: 58%;"></div>
@@ -365,8 +389,32 @@
                     <span class="font-mono text-[11px] text-text-muted pt-1">18 Okt</span>
                   </div>
 
-                  <div class="flex flex-col items-center gap-2 flex-1 h-full justify-end chart-bar-col"
+                  <div class="flex flex-col items-center gap-2 flex-1 h-full justify-end chart-bar-col relative group cursor-pointer"
                        data-date="19 Okt 2024" data-shift="Shift 1 & 2" data-out="1.720 Ton" data-in="1.880 Ton" data-surplus="+160 Ton" data-surplus-color="text-emerald-400">
+
+                    <!-- Pure CSS Tooltip -->
+                    <div class="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 bg-white border border-[#E2E8F0] shadow-lg rounded-lg p-3 w-48 z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 pointer-events-none">
+                      <div class="flex items-center justify-between mb-1.5 pb-1.5 border-b border-[#E2E8F0]">
+                        <span class="text-[12px] font-bold text-[#0F172A]">19 Okt 2024</span>
+                        
+                      </div>
+                      <div class="flex flex-col gap-1">
+                        <div class="flex items-center justify-between text-[11px]">
+                          <span class="text-[#475569] flex items-center gap-1"><span class="w-2 h-2 rounded-sm bg-slate-400"></span>Masuk</span>
+                          <span class="font-mono font-bold text-[#0F172A]">1.880 Ton</span>
+                        </div>
+                        <div class="flex items-center justify-between text-[11px]">
+                          <span class="text-[#475569] flex items-center gap-1"><span class="w-2 h-2 rounded-sm bg-brand-blue"></span>Keluar</span>
+                          <span class="font-mono font-bold text-[#0F172A]">1.720 Ton</span>
+                        </div>
+                        <div class="flex items-center justify-between text-[11px] mt-1 pt-1 border-t border-[#E2E8F0] border-dashed">
+                          <span class="text-[#475569]">Selisih</span>
+                          <span class="font-mono font-bold text-emerald-400">+160 Ton</span>
+                        </div>
+                      </div>
+                      <div class="absolute -bottom-1.5 left-1/2 -translate-x-1/2 w-3 h-3 bg-white border-b border-r border-[#E2E8F0] rotate-45"></div>
+                    </div>
+
                     <div class="flex items-end gap-1.5 h-full w-full justify-center">
                       <div class="w-5 bg-brand-blue rounded-t-xs transition-all shadow-xs" style="height: 38%;"></div>
                       <div class="w-5 bg-slate-400 rounded-t-xs transition-all shadow-xs" style="height: 42%;"></div>
@@ -374,8 +422,32 @@
                     <span class="font-mono text-[11px] text-text-muted pt-1">19 Okt</span>
                   </div>
 
-                  <div class="flex flex-col items-center gap-2 flex-1 h-full justify-end chart-bar-col"
+                  <div class="flex flex-col items-center gap-2 flex-1 h-full justify-end chart-bar-col relative group cursor-pointer"
                        data-date="20 Okt 2024" data-shift="Shift 1 & 2" data-out="720 Ton" data-in="540 Ton" data-surplus="-180 Ton" data-surplus-color="text-critical-text">
+
+                    <!-- Pure CSS Tooltip -->
+                    <div class="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 bg-white border border-[#E2E8F0] shadow-lg rounded-lg p-3 w-48 z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 pointer-events-none">
+                      <div class="flex items-center justify-between mb-1.5 pb-1.5 border-b border-[#E2E8F0]">
+                        <span class="text-[12px] font-bold text-[#0F172A]">20 Okt 2024</span>
+                        
+                      </div>
+                      <div class="flex flex-col gap-1">
+                        <div class="flex items-center justify-between text-[11px]">
+                          <span class="text-[#475569] flex items-center gap-1"><span class="w-2 h-2 rounded-sm bg-slate-400"></span>Masuk</span>
+                          <span class="font-mono font-bold text-[#0F172A]">540 Ton</span>
+                        </div>
+                        <div class="flex items-center justify-between text-[11px]">
+                          <span class="text-[#475569] flex items-center gap-1"><span class="w-2 h-2 rounded-sm bg-brand-blue"></span>Keluar</span>
+                          <span class="font-mono font-bold text-[#0F172A]">720 Ton</span>
+                        </div>
+                        <div class="flex items-center justify-between text-[11px] mt-1 pt-1 border-t border-[#E2E8F0] border-dashed">
+                          <span class="text-[#475569]">Selisih</span>
+                          <span class="font-mono font-bold text-critical-text">-180 Ton</span>
+                        </div>
+                      </div>
+                      <div class="absolute -bottom-1.5 left-1/2 -translate-x-1/2 w-3 h-3 bg-white border-b border-r border-[#E2E8F0] rotate-45"></div>
+                    </div>
+
                     <div class="flex items-end gap-1.5 h-full w-full justify-center">
                       <div class="w-5 bg-brand-blue rounded-t-xs transition-all shadow-xs" style="height: 16%;"></div>
                       <div class="w-5 bg-slate-400 rounded-t-xs transition-all shadow-xs" style="height: 12%;"></div>
@@ -383,8 +455,32 @@
                     <span class="font-mono text-[11px] text-text-muted pt-1">20 Okt</span>
                   </div>
 
-                  <div class="flex flex-col items-center gap-2 flex-1 h-full justify-end chart-bar-col"
+                  <div class="flex flex-col items-center gap-2 flex-1 h-full justify-end chart-bar-col relative group cursor-pointer"
                        data-date="21 Okt 2024" data-shift="Shift 1 & 2" data-out="3.120 Ton" data-in="3.400 Ton" data-surplus="+280 Ton" data-surplus-color="text-emerald-400">
+
+                    <!-- Pure CSS Tooltip -->
+                    <div class="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 bg-white border border-[#E2E8F0] shadow-lg rounded-lg p-3 w-48 z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 pointer-events-none">
+                      <div class="flex items-center justify-between mb-1.5 pb-1.5 border-b border-[#E2E8F0]">
+                        <span class="text-[12px] font-bold text-[#0F172A]">21 Okt 2024</span>
+                        
+                      </div>
+                      <div class="flex flex-col gap-1">
+                        <div class="flex items-center justify-between text-[11px]">
+                          <span class="text-[#475569] flex items-center gap-1"><span class="w-2 h-2 rounded-sm bg-slate-400"></span>Masuk</span>
+                          <span class="font-mono font-bold text-[#0F172A]">3.400 Ton</span>
+                        </div>
+                        <div class="flex items-center justify-between text-[11px]">
+                          <span class="text-[#475569] flex items-center gap-1"><span class="w-2 h-2 rounded-sm bg-brand-blue"></span>Keluar</span>
+                          <span class="font-mono font-bold text-[#0F172A]">3.120 Ton</span>
+                        </div>
+                        <div class="flex items-center justify-between text-[11px] mt-1 pt-1 border-t border-[#E2E8F0] border-dashed">
+                          <span class="text-[#475569]">Selisih</span>
+                          <span class="font-mono font-bold text-emerald-400">+280 Ton</span>
+                        </div>
+                      </div>
+                      <div class="absolute -bottom-1.5 left-1/2 -translate-x-1/2 w-3 h-3 bg-white border-b border-r border-[#E2E8F0] rotate-45"></div>
+                    </div>
+
                     <div class="flex items-end gap-1.5 h-full w-full justify-center">
                       <div class="w-5 bg-brand-blue rounded-t-xs transition-all shadow-xs" style="height: 69%;"></div>
                       <div class="w-5 bg-slate-400 rounded-t-xs transition-all shadow-xs" style="height: 76%;"></div>
@@ -392,8 +488,32 @@
                     <span class="font-mono text-[11px] text-text-muted pt-1">21 Okt</span>
                   </div>
 
-                  <div class="flex flex-col items-center gap-2 flex-1 h-full justify-end chart-bar-col"
+                  <div class="flex flex-col items-center gap-2 flex-1 h-full justify-end chart-bar-col relative group cursor-pointer"
                        data-date="22 Okt 2024" data-shift="Shift 1 & 2" data-out="3.480 Ton" data-in="2.950 Ton" data-surplus="-530 Ton" data-surplus-color="text-critical-text">
+
+                    <!-- Pure CSS Tooltip -->
+                    <div class="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 bg-white border border-[#E2E8F0] shadow-lg rounded-lg p-3 w-48 z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 pointer-events-none">
+                      <div class="flex items-center justify-between mb-1.5 pb-1.5 border-b border-[#E2E8F0]">
+                        <span class="text-[12px] font-bold text-[#0F172A]">22 Okt 2024</span>
+                        
+                      </div>
+                      <div class="flex flex-col gap-1">
+                        <div class="flex items-center justify-between text-[11px]">
+                          <span class="text-[#475569] flex items-center gap-1"><span class="w-2 h-2 rounded-sm bg-slate-400"></span>Masuk</span>
+                          <span class="font-mono font-bold text-[#0F172A]">2.950 Ton</span>
+                        </div>
+                        <div class="flex items-center justify-between text-[11px]">
+                          <span class="text-[#475569] flex items-center gap-1"><span class="w-2 h-2 rounded-sm bg-brand-blue"></span>Keluar</span>
+                          <span class="font-mono font-bold text-[#0F172A]">3.480 Ton</span>
+                        </div>
+                        <div class="flex items-center justify-between text-[11px] mt-1 pt-1 border-t border-[#E2E8F0] border-dashed">
+                          <span class="text-[#475569]">Selisih</span>
+                          <span class="font-mono font-bold text-critical-text">-530 Ton</span>
+                        </div>
+                      </div>
+                      <div class="absolute -bottom-1.5 left-1/2 -translate-x-1/2 w-3 h-3 bg-white border-b border-r border-[#E2E8F0] rotate-45"></div>
+                    </div>
+
                     <div class="flex items-end gap-1.5 h-full w-full justify-center">
                       <div class="w-5 bg-brand-blue rounded-t-xs transition-all shadow-xs" style="height: 77%;"></div>
                       <div class="w-5 bg-slate-400 rounded-t-xs transition-all shadow-xs" style="height: 66%;"></div>
@@ -401,8 +521,32 @@
                     <span class="font-mono text-[11px] text-text-muted pt-1">22 Okt</span>
                   </div>
 
-                  <div class="flex flex-col items-center gap-2 flex-1 h-full justify-end chart-bar-col"
+                  <div class="flex flex-col items-center gap-2 flex-1 h-full justify-end chart-bar-col relative group cursor-pointer"
                        data-date="23 Okt 2024" data-shift="Shift 1 & 2" data-out="2.890 Ton" data-in="3.200 Ton" data-surplus="+310 Ton" data-surplus-color="text-emerald-400">
+
+                    <!-- Pure CSS Tooltip -->
+                    <div class="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 bg-white border border-[#E2E8F0] shadow-lg rounded-lg p-3 w-48 z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 pointer-events-none">
+                      <div class="flex items-center justify-between mb-1.5 pb-1.5 border-b border-[#E2E8F0]">
+                        <span class="text-[12px] font-bold text-[#0F172A]">23 Okt 2024</span>
+                        
+                      </div>
+                      <div class="flex flex-col gap-1">
+                        <div class="flex items-center justify-between text-[11px]">
+                          <span class="text-[#475569] flex items-center gap-1"><span class="w-2 h-2 rounded-sm bg-slate-400"></span>Masuk</span>
+                          <span class="font-mono font-bold text-[#0F172A]">3.200 Ton</span>
+                        </div>
+                        <div class="flex items-center justify-between text-[11px]">
+                          <span class="text-[#475569] flex items-center gap-1"><span class="w-2 h-2 rounded-sm bg-brand-blue"></span>Keluar</span>
+                          <span class="font-mono font-bold text-[#0F172A]">2.890 Ton</span>
+                        </div>
+                        <div class="flex items-center justify-between text-[11px] mt-1 pt-1 border-t border-[#E2E8F0] border-dashed">
+                          <span class="text-[#475569]">Selisih</span>
+                          <span class="font-mono font-bold text-emerald-400">+310 Ton</span>
+                        </div>
+                      </div>
+                      <div class="absolute -bottom-1.5 left-1/2 -translate-x-1/2 w-3 h-3 bg-white border-b border-r border-[#E2E8F0] rotate-45"></div>
+                    </div>
+
                     <div class="flex items-end gap-1.5 h-full w-full justify-center">
                       <div class="w-5 bg-brand-blue rounded-t-xs transition-all shadow-xs" style="height: 64%;"></div>
                       <div class="w-5 bg-slate-400 rounded-t-xs transition-all shadow-xs" style="height: 71%;"></div>
@@ -410,55 +554,40 @@
                     <span class="font-mono text-[11px] text-text-muted pt-1">23 Okt</span>
                   </div>
 
-                  <div class="flex flex-col items-center gap-2 flex-1 h-full justify-end bg-brand-blue-soft/50 border border-brand-blue-border/70 rounded-xs pb-0 chart-bar-col"
+                  <div class="flex flex-col items-center gap-2 flex-1 h-full justify-end chart-bar-col relative group cursor-pointer"
                        data-date="Hari Ini (24 Okt)" data-shift="Estimasi Harian" data-out="3.420 Ton" data-in="3.100 Ton" data-surplus="-320 Ton" data-surplus-color="text-critical-text">
+                    
+                    <!-- Pure CSS Tooltip -->
+                    <div class="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 bg-white border border-[#E2E8F0] shadow-lg rounded-lg p-3 w-48 z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 pointer-events-none">
+                      <div class="flex items-center justify-between mb-1.5 pb-1.5 border-b border-[#E2E8F0]">
+                        <span class="text-[12px] font-bold text-[#0F172A]">Hari Ini (24 Okt)</span>
+                        
+                      </div>
+                      <div class="flex flex-col gap-1">
+                        <div class="flex items-center justify-between text-[11px]">
+                          <span class="text-[#475569] flex items-center gap-1"><span class="w-2 h-2 rounded-sm bg-slate-400"></span>Masuk</span>
+                          <span class="font-mono font-bold text-[#0F172A]">3.100 Ton</span>
+                        </div>
+                        <div class="flex items-center justify-between text-[11px]">
+                          <span class="text-[#475569] flex items-center gap-1"><span class="w-2 h-2 rounded-sm bg-brand-blue"></span>Keluar</span>
+                          <span class="font-mono font-bold text-[#0F172A]">3.420 Ton</span>
+                        </div>
+                        <div class="flex items-center justify-between text-[11px] mt-1 pt-1 border-t border-[#E2E8F0] border-dashed">
+                          <span class="text-[#475569]">Selisih</span>
+                          <span class="font-mono font-bold text-critical-text">-320 Ton</span>
+                        </div>
+                      </div>
+                      <div class="absolute -bottom-1.5 left-1/2 -translate-x-1/2 w-3 h-3 bg-white border-b border-r border-[#E2E8F0] rotate-45"></div>
+                    </div>
+
                     <div class="flex items-end gap-1.5 h-full w-full justify-center">
-                      <div class="w-5 bg-brand-blue rounded-t-xs shadow-xs" style="height: 76%;"></div>
-                      <div class="w-5 bg-slate-400 rounded-t-xs shadow-xs" style="height: 69%;"></div>
+                      <div class="w-5 bg-brand-blue rounded-t-xs transition-all shadow-xs" style="height: 76%;"></div>
+                      <div class="w-5 bg-slate-400 rounded-t-xs transition-all shadow-xs" style="height: 69%;"></div>
                     </div>
-                    <span class="font-mono text-[11px] font-bold text-brand-blue pt-1">Hari Ini</span>
+                    <span class="font-mono text-[11px] text-text-muted font-bold pt-1">Hari Ini</span>
                   </div>
-
                 </div>
               </div>
-
-              <!-- Interactive Tooltip Wrapper -->
-              <div id="chart-tooltip-wrapper" class="absolute z-30 pointer-events-none chart-tooltip-wrapper" style="left: 50%; top: 6px; transform: translateX(-50%);">
-                <div class="relative flex flex-col items-center">
-                  <div class="bg-slate-900/95 backdrop-blur-md text-white rounded-xl shadow-2xl border border-slate-700/60 p-3.5 w-60 select-none animate-fadeIn">
-                    <div class="flex items-center justify-between border-b border-slate-800 pb-2 mb-2.5">
-                      <div class="flex items-center gap-1.5">
-                        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
-                        <span id="tooltip-date" class="text-xs font-bold text-slate-100 tracking-wide">21 Okt 2024</span>
-                      </div>
-                      <span id="tooltip-shift" class="text-[10px] font-mono px-1.5 py-0.5 rounded bg-slate-800 text-slate-300 border border-slate-700">Shift 1 &amp; 2</span>
-                    </div>
-                    <div class="space-y-2 text-xs">
-                      <div class="flex items-center justify-between gap-3">
-                        <div class="flex items-center gap-2">
-                          <span class="w-2.5 h-2.5 rounded-full bg-brand-blue ring-2 ring-brand-blue/30 shrink-0"></span>
-                          <span class="text-slate-300 text-[11px]">Semen Keluar:</span>
-                        </div>
-                        <span id="tooltip-out" class="font-mono font-bold text-white text-[12px]">3.120 Ton</span>
-                      </div>
-                      <div class="flex items-center justify-between gap-3">
-                        <div class="flex items-center gap-2">
-                          <span class="w-2.5 h-2.5 rounded-full bg-slate-400 ring-2 ring-slate-400/30 shrink-0"></span>
-                          <span class="text-slate-300 text-[11px]">Semen Masuk:</span>
-                        </div>
-                        <span id="tooltip-in" class="font-mono font-bold text-white text-[12px]">3.400 Ton</span>
-                      </div>
-                      <div class="pt-2 border-t border-slate-800/80 flex items-center justify-between text-[11px]">
-                        <span class="text-slate-400">Surplus Harian:</span>
-                        <span id="tooltip-surplus" class="font-mono font-semibold text-emerald-400">+280 Ton</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="w-0.5 border-l-2 border-dashed border-slate-400/80" style="height: 70px;"></div>
-                  <div class="w-3 h-3 rounded-full bg-brand-blue ring-4 ring-slate-900/60 -mt-1"></div>
-                </div>
-              </div>
-              
             </div>
           </div>
         </div>
@@ -521,7 +650,7 @@
                 <td class="py-3 px-4"><div class="font-semibold text-text-main">TB Sumber Rejeki Makmur</div><div class="text-[11px] text-text-muted">Kudus • ID: #CUST-9021</div></td>
                 <td class="py-3 px-4"><div class="font-mono font-semibold text-text-main">60 Ton (1.500 Zak)</div><div class="font-mono text-text-muted">Rp 98.400.000</div></td>
                 <td class="py-3 px-4"><span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-critical-bg text-critical-text border border-critical-border text-[11px] font-medium"><span class="material-symbols-outlined text-[13px]">credit_card_off</span>Overlimit Plafon Rp 24,5 Jt</span></td>
-                <td class="py-3 px-4 text-right"><div class="inline-flex items-center gap-1.5"><button class="h-7 px-3 rounded bg-brand-blue hover:bg-brand-blue-vivid text-white text-[11px] font-semibold transition-colors shadow-xs whitespace-nowrap" type="button">Otorisasi Plafon</button><button class="h-7 w-7 rounded bg-surface-card hover:bg-canvas-bg border border-border-subtle text-text-main hover:border-slate-300 flex items-center justify-center transition-colors" title="Detail Dokumen" type="button"><span class="material-symbols-outlined text-[16px]">visibility</span></button></div></td>
+                <td class="py-3 px-4 text-right"><div class="inline-flex items-center gap-1.5"><button class="min-h-[28px] py-1 px-3 leading-tight flex flex-col items-center justify-center rounded bg-brand-blue hover:bg-brand-blue-vivid text-white text-[11px] font-semibold transition-colors shadow-xs whitespace-normal" type="button">Otorisasi Plafon</button><button class="h-7 w-7 rounded bg-surface-card hover:bg-canvas-bg border border-border-subtle text-text-main hover:border-slate-300 flex items-center justify-center transition-colors" title="Detail Dokumen" type="button"><span class="material-symbols-outlined text-[16px]">visibility</span></button></div></td>
               </tr>
               <tr class="hover:bg-slate-50/80 transition-colors">
                 <td class="py-3 px-4"><div class="font-mono font-semibold text-brand-blue">INV-PAD-2024-10-0885</div><div class="text-[11px] text-text-muted">Finance Billing • 08:24 WIB</div></td>
@@ -529,7 +658,7 @@
                 <td class="py-3 px-4"><div class="font-semibold text-text-main">PT Waskita Beton Precast Tbk</div><div class="text-[11px] text-text-muted">Plant Bojonegara • ID: #CUST-1102</div></td>
                 <td class="py-3 px-4"><div class="font-mono font-semibold text-text-main">180 Ton (Curah Tipe V)</div><div class="font-mono text-text-muted">Rp 15.400.000</div></td>
                 <td class="py-3 px-4"><span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-amber-50 text-warning-text border border-warning-border text-[11px] font-medium"><span class="material-symbols-outlined text-[13px]">schedule</span>Faktur Lewat Tempo &gt; 7 Hari</span></td>
-                <td class="py-3 px-4 text-right"><div class="inline-flex items-center gap-1.5"><button class="h-7 px-3 rounded bg-brand-blue hover:bg-brand-blue-vivid text-white text-[11px] font-semibold transition-colors shadow-xs whitespace-nowrap" type="button">Tindak Lanjuti AR</button><button class="h-7 w-7 rounded bg-surface-card hover:bg-canvas-bg border border-border-subtle text-text-main hover:border-slate-300 flex items-center justify-center transition-colors" title="Detail Faktur" type="button"><span class="material-symbols-outlined text-[16px]">receipt_long</span></button></div></td>
+                <td class="py-3 px-4 text-right"><div class="inline-flex items-center gap-1.5"><button class="min-h-[28px] py-1 px-3 leading-tight flex flex-col items-center justify-center rounded bg-brand-blue hover:bg-brand-blue-vivid text-white text-[11px] font-semibold transition-colors shadow-xs whitespace-normal" type="button">Tindak Lanjuti AR</button><button class="h-7 w-7 rounded bg-surface-card hover:bg-canvas-bg border border-border-subtle text-text-main hover:border-slate-300 flex items-center justify-center transition-colors" title="Detail Faktur" type="button"><span class="material-symbols-outlined text-[16px]">receipt_long</span></button></div></td>
               </tr>
               <tr class="hover:bg-slate-50/80 transition-colors">
                 <td class="py-3 px-4"><div class="font-mono font-semibold text-brand-blue">DO-PAD-2410-0419</div><div class="text-[11px] text-text-muted">Dispatch Yard Cikande • 08:35 WIB</div></td>
@@ -537,7 +666,7 @@
                 <td class="py-3 px-4"><div class="font-semibold text-text-main">CV Bintang Jaya Bangunan</div><div class="text-[11px] text-text-muted">Serang • ID: #CUST-4029</div></td>
                 <td class="py-3 px-4"><div class="font-mono font-semibold text-text-main">20 Ton (PCC 40kg)</div><div class="font-mono text-text-muted">Rp 31.600.000</div></td>
                 <td class="py-3 px-4"><span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-critical-bg text-critical-text border border-critical-border text-[11px] font-medium"><span class="material-symbols-outlined text-[13px]">inventory</span>Stok Cikande Tidak Cukup</span></td>
-                <td class="py-3 px-4 text-right"><div class="inline-flex items-center gap-1.5"><button class="h-7 px-3 rounded bg-slate-100 hover:bg-slate-200 border border-border-subtle text-text-main text-[11px] font-medium transition-colors whitespace-nowrap" type="button">Alihkan ke Bitung</button><button class="h-7 w-7 rounded bg-surface-card hover:bg-canvas-bg border border-border-subtle text-text-main hover:border-slate-300 flex items-center justify-center transition-colors" title="Rute Alternatif" type="button"><span class="material-symbols-outlined text-[16px]">alt_route</span></button></div></td>
+                <td class="py-3 px-4 text-right"><div class="inline-flex items-center gap-1.5"><button class="min-h-[28px] py-1 px-3 leading-tight flex flex-col items-center justify-center rounded bg-slate-100 hover:bg-slate-200 border border-border-subtle text-text-main text-[11px] font-medium transition-colors whitespace-normal" type="button">Alihkan ke Bitung</button><button class="h-7 w-7 rounded bg-surface-card hover:bg-canvas-bg border border-border-subtle text-text-main hover:border-slate-300 flex items-center justify-center transition-colors" title="Rute Alternatif" type="button"><span class="material-symbols-outlined text-[16px]">alt_route</span></button></div></td>
               </tr>
               <tr class="hover:bg-slate-50/80 transition-colors">
                 <td class="py-3 px-4"><div class="font-mono font-semibold text-brand-blue">ADJ-STK-2024-104</div><div class="text-[11px] text-text-muted">Gudang Bitung R2 • 08:37 WIB</div></td>
@@ -545,7 +674,7 @@
                 <td class="py-3 px-4"><div class="font-semibold text-text-main">Depo Gudang Bitung R2</div><div class="text-[11px] text-text-muted">Semen Gresik PPC 40kg</div></td>
                 <td class="py-3 px-4"><div class="font-mono font-semibold text-critical-text">-24 Zak (Selisih Fisik)</div><div class="font-mono text-text-muted">Nilai: Rp 1.560.000</div></td>
                 <td class="py-3 px-4"><span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-amber-50 text-warning-text border border-warning-border text-[11px] font-medium"><span class="material-symbols-outlined text-[13px]">inventory_2</span>Selisih Opname Zak Semen</span></td>
-                <td class="py-3 px-4 text-right"><div class="inline-flex items-center gap-1.5"><button class="h-7 px-3 rounded bg-brand-blue hover:bg-brand-blue-vivid text-white text-[11px] font-semibold transition-colors shadow-xs" type="button">Verifikasi Opname</button><button class="h-7 w-7 rounded bg-surface-card hover:bg-canvas-bg border border-border-subtle text-text-main hover:border-slate-300 flex items-center justify-center transition-colors" title="Detail Opname" type="button"><span class="material-symbols-outlined text-[16px]">visibility</span></button></div></td>
+                <td class="py-3 px-4 text-right"><div class="inline-flex items-center gap-1.5"><button class="min-h-[28px] py-1 px-3 leading-tight flex flex-col items-center justify-center rounded bg-brand-blue hover:bg-brand-blue-vivid text-white text-[11px] font-semibold transition-colors shadow-xs" type="button">Verifikasi Opname</button><button class="h-7 w-7 rounded bg-surface-card hover:bg-canvas-bg border border-border-subtle text-text-main hover:border-slate-300 flex items-center justify-center transition-colors" title="Detail Opname" type="button"><span class="material-symbols-outlined text-[16px]">visibility</span></button></div></td>
               </tr>
               <tr class="hover:bg-slate-50/80 transition-colors">
                 <td class="py-3 px-4"><div class="font-mono font-semibold text-brand-blue">SF-TIRO-2024-8849</div><div class="text-[11px] text-text-muted">Via SF TIRO API • 08:39 WIB</div></td>
@@ -553,17 +682,26 @@
                 <td class="py-3 px-4"><div class="font-semibold text-text-main">UD Subur Abadi Mandiri</div><div class="text-[11px] text-text-muted">Tangerang • ID: #CUST-7721</div></td>
                 <td class="py-3 px-4"><div class="font-mono font-semibold text-text-main">40 Ton (PCC 50kg)</div><div class="font-mono text-text-muted">Rp 64.200.000</div></td>
                 <td class="py-3 px-4"><span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-critical-bg text-critical-text border border-critical-border text-[11px] font-medium"><span class="material-symbols-outlined text-[13px]">lock</span>Akun Terblokir Finance (Suspended)</span></td>
-                <td class="py-3 px-4 text-right"><div class="inline-flex items-center gap-1.5"><button class="h-7 px-3 rounded bg-critical-bg hover:bg-critical-text border border-critical-border text-critical-text hover:text-white text-[11px] font-semibold transition-colors whitespace-nowrap" type="button">Review Status</button><button class="h-7 w-7 rounded bg-surface-card hover:bg-canvas-bg border border-border-subtle text-text-main hover:border-slate-300 flex items-center justify-center transition-colors" title="Detail Toko" type="button"><span class="material-symbols-outlined text-[16px]">visibility</span></button></div></td>
+                <td class="py-3 px-4 text-right"><div class="inline-flex items-center gap-1.5"><button class="min-h-[28px] py-1 px-3 leading-tight flex flex-col items-center justify-center rounded bg-critical-bg hover:bg-critical-text border border-critical-border text-critical-text hover:text-white text-[11px] font-semibold transition-colors whitespace-normal" type="button">Review Status</button><button class="h-7 w-7 rounded bg-surface-card hover:bg-canvas-bg border border-border-subtle text-text-main hover:border-slate-300 flex items-center justify-center transition-colors" title="Detail Toko" type="button"><span class="material-symbols-outlined text-[16px]">visibility</span></button></div></td>
               </tr>
             </tbody>
           </table>
         </div>
         <!-- Table Footer -->
-        <div class="px-4 py-2.5 bg-slate-50 border-t border-border-subtle flex items-center justify-between text-xs text-text-muted">
-          <span class="">Menampilkan 5 dari 7 antrean dokumen yang memerlukan tindakan</span>
-          <a class="text-brand-blue hover:text-brand-blue-vivid font-semibold flex items-center gap-1 hover:underline" href="#">
-            Buka Semua Antrean Pekerjaan <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
-          </a>
+        <div class="px-4 py-3 bg-slate-50 border-t border-border-subtle flex flex-col sm:flex-row items-center justify-between gap-3">
+          <span class="text-xs text-text-muted">Menampilkan <span class="font-semibold text-text-main">1</span> - <span class="font-semibold text-text-main">5</span> dari <span class="font-semibold text-text-main">7</span> antrean</span>
+          
+          <div class="flex items-center gap-1">
+            <button class="w-8 h-8 flex items-center justify-center rounded-md text-slate-300 pointer-events-none" disabled>
+              <span class="material-symbols-outlined text-[20px]">chevron_left</span>
+            </button>
+            <button class="w-8 h-8 flex items-center justify-center rounded-md bg-brand-blue text-white text-[13px] font-semibold shadow-xs">1</button>
+            <button class="w-8 h-8 flex items-center justify-center rounded-md text-text-secondary hover:bg-slate-200 text-[13px] font-semibold transition-colors">2</button>
+            <button class="w-8 h-8 flex items-center justify-center rounded-md text-text-secondary hover:bg-slate-200 text-[13px] font-semibold transition-colors">3</button>
+            <button class="w-8 h-8 flex items-center justify-center rounded-md text-text-secondary hover:bg-slate-200 transition-colors">
+              <span class="material-symbols-outlined text-[20px]">chevron_right</span>
+            </button>
+          </div>
         </div>
       </div>
 
@@ -658,3 +796,5 @@
 <script src="js/script.js"></script>
 </body>
 </html>
+
+
