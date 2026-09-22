@@ -1,6 +1,6 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><link rel="stylesheet" href="../css/style.css">
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><link rel="stylesheet" href="css/style.css">
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<script src="../js/tailwind-config.js"></script></head><body class="bg-[#f8fafc] font-body-md text-slate-900 select-none antialiased"><aside id="app-sidebar" class="fixed left-0 transition-all duration-300  top-0 h-screen w-64 bg-surface-card border-r border-border-subtle z-50 flex flex-col justify-between shadow-sm">
+<script src="js/tailwind-config.js"></script></head><body class="bg-[#f8fafc] font-body-md text-slate-900 select-none antialiased"><aside id="app-sidebar" class="fixed left-0 transition-all duration-300  top-0 h-screen w-64 bg-surface-card border-r border-border-subtle z-50 flex flex-col justify-between shadow-sm">
 <div class="flex flex-col h-full">
 <div class="h-16 px-4 flex items-center border-b border-border-subtle bg-surface-card">
 <img id="sidebar-logo" alt="PAD Logo" class="h-9 w-auto object-contain shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBPebh6o-ArHmOrm3NNk-epNwZVbyhFzdCL7_w4NG_sZ8wl0WxBdMBRmluuZ3PwcVPyG8daB_b51DtS3iZd8_CNDuJcWSDNgFtjI2-vr59Cr1vw9X9NYn-GakQH1CEAJ1AZfiGg36lfEG492MGTS6mvCERBRKjXP8pS6dIUOqcvhqDxTGzdAyQ-QFIjWd3z6UMuQUI1IOJAX-SjHk1WIMcwaTQkpelrBc1DCs9Kx6US6YPxl2Xt1t5j0j2L4jE1zOmBxuA">
@@ -16,18 +16,18 @@
 <span class="text-[10px] text-text-muted leading-tight group-hover:text-brand-blue/70">Ringkasan Harian</span>
 </div>
 </a>
-<a aria-current="page" class="flex items-center gap-2.5 px-3 py-2 rounded-lg transition-colors bg-brand-blue-soft text-brand-blue font-semibold border border-brand-blue-border/60 shadow-xs cursor-pointer" href="master-data-akses.html">
-<span class="material-symbols-outlined text-[19px] text-brand-blue">database</span>
+<a class="group flex items-center gap-2.5 px-3 py-2 rounded-lg text-text-secondary hover:bg-brand-blue-soft hover:text-brand-blue transition-colors cursor-pointer" href="master-data-akses.html">
+<span class="material-symbols-outlined text-[19px] text-text-muted group-hover:text-brand-blue transition-colors">database</span>
 <div class="sidebar-text flex flex-col min-w-0 transition-opacity duration-300">
-<span class="text-[13px] leading-tight font-semibold">Master Data &amp; Akses</span>
-<span class="text-[10px] text-brand-blue/70 font-normal leading-tight">Data Referensi &amp; Hak Akses</span>
+<span class="text-[13px] font-medium leading-tight group-hover:font-semibold">Master Data &amp; Akses</span>
+<span class="text-[10px] text-text-muted leading-tight group-hover:text-brand-blue/70">Data Referensi &amp; Hak Akses</span>
 </div>
 </a>
-<a class="group flex items-center gap-2.5 px-3 py-2 rounded-lg text-text-secondary hover:bg-brand-blue-soft hover:text-brand-blue transition-colors cursor-pointer" href="procurement.html">
-<span class="material-symbols-outlined text-[19px] text-text-muted group-hover:text-brand-blue transition-colors">shopping_cart</span>
+<a aria-current="page" class="flex items-center gap-2.5 px-3 py-2 rounded-lg transition-colors bg-brand-blue-soft text-brand-blue font-semibold border border-brand-blue-border/60 shadow-xs cursor-pointer" href="procurement.html">
+<span class="material-symbols-outlined text-[19px] text-brand-blue">shopping_cart</span>
 <div class="sidebar-text flex flex-col min-w-0 transition-opacity duration-300">
-<span class="text-[13px] font-medium leading-tight group-hover:font-semibold">Procurement</span>
-<span class="text-[10px] text-text-muted leading-tight group-hover:text-brand-blue/70">Pengadaan &amp; Pembelian</span>
+<span class="text-[13px] leading-tight font-semibold">Procurement</span>
+<span class="text-[10px] text-brand-blue/70 font-normal leading-tight">Pengadaan &amp; Pembelian</span>
 </div>
 </a>
 <a class="group flex items-center gap-2.5 px-3 py-2 rounded-lg text-text-secondary hover:bg-brand-blue-soft hover:text-brand-blue transition-colors cursor-pointer" href="warehouse-inventory.html">
@@ -215,8 +215,8 @@
 </td>
 <td class="py-3 px-4 text-center">
 <div class="inline-flex items-center gap-1.5">
-<button class="h-7 px-2.5 rounded-md bg-white border border-slate-200 hover:bg-slate-50 text-slate-700 text-[11px] font-medium transition-colors cursor-pointer shadow-2xs" onclick="alert('DO Pabrik SI: DO-SIG-88192-SBY terverifikasi')" type="button">Lihat DO Pabrik</button>
-<button class="h-7 px-2.5 rounded-md bg-[#1e3a8a] hover:bg-blue-800 text-white text-[11px] font-semibold transition-colors cursor-pointer shadow-2xs" onclick="openConfirmArrivalModal('PO-PAD/2024/05-081', 'PT Semen Indonesia (Persero) Tbk', '7.500 MT Curah OPC Tipe I', 'Dermaga Bitung')" type="button">Konfirmasi Tiba</button>
+<button class="w-7 h-7 flex items-center justify-center p-0 rounded-md bg-white border border-slate-200 hover:bg-slate-50 text-slate-700 transition-colors cursor-pointer shadow-2xs" onclick="alert('DO Pabrik SI: DO-SIG-88192-SBY terverifikasi')" type="button" title="Lihat DO Pabrik"><span class="material-symbols-outlined text-[16px]">visibility</span></button>
+<button class="w-7 h-7 flex items-center justify-center p-0 rounded-md bg-[#1e3a8a] hover:bg-blue-800 text-white transition-colors cursor-pointer shadow-2xs" onclick="openConfirmArrivalModal('PO-PAD/2024/05-081', 'PT Semen Indonesia (Persero) Tbk', '7.500 MT Curah OPC Tipe I', 'Dermaga Bitung')" type="button" title="Konfirmasi Tiba"><span class="material-symbols-outlined text-[16px]">check_circle</span></button>
 </div>
 </td>
 </tr>
@@ -244,8 +244,8 @@
 </td>
 <td class="py-3 px-4 text-center">
 <div class="inline-flex items-center gap-1.5">
-<button class="h-7 px-2.5 rounded-md bg-white border border-slate-200 hover:bg-slate-50 text-slate-700 text-[11px] font-medium transition-colors cursor-pointer shadow-2xs" onclick="alert('DO Indocement: DO-ICP-44211 terverifikasi')" type="button">Lihat DO Pabrik</button>
-<button class="h-7 px-2.5 rounded-md bg-[#1e3a8a] hover:bg-blue-800 text-white text-[11px] font-semibold transition-colors cursor-pointer shadow-2xs" onclick="openConfirmArrivalModal('PO-PAD/2024/05-080', 'PT Indocement Tunggal Prakarsa Tbk', '4.200 MT Zak 50kg PCC', 'Stasiun Kalimas SBY')" type="button">Konfirmasi Tiba</button>
+<button class="w-7 h-7 flex items-center justify-center p-0 rounded-md bg-white border border-slate-200 hover:bg-slate-50 text-slate-700 transition-colors cursor-pointer shadow-2xs" onclick="alert('DO Indocement: DO-ICP-44211 terverifikasi')" type="button" title="Lihat DO Pabrik"><span class="material-symbols-outlined text-[16px]">visibility</span></button>
+<button class="w-7 h-7 flex items-center justify-center p-0 rounded-md bg-[#1e3a8a] hover:bg-blue-800 text-white transition-colors cursor-pointer shadow-2xs" onclick="openConfirmArrivalModal('PO-PAD/2024/05-080', 'PT Indocement Tunggal Prakarsa Tbk', '4.200 MT Zak 50kg PCC', 'Stasiun Kalimas SBY')" type="button" title="Konfirmasi Tiba"><span class="material-symbols-outlined text-[16px]">check_circle</span></button>
 </div>
 </td>
 </tr>
@@ -273,7 +273,7 @@
 </td>
 <td class="py-3 px-4 text-center">
 <div class="inline-flex items-center gap-1.5">
-<button class="h-7 px-2.5 rounded-md bg-white border border-slate-200 hover:bg-slate-50 text-slate-700 text-[11px] font-medium transition-colors cursor-pointer shadow-2xs" onclick="alert('Arsip DO &amp; Faktur PT SBI: PO-78 Selesai')" type="button">Lihat DO Pabrik</button>
+<button class="w-7 h-7 flex items-center justify-center p-0 rounded-md bg-white border border-slate-200 hover:bg-slate-50 text-slate-700 transition-colors cursor-pointer shadow-2xs" onclick="alert('Arsip DO &amp; Faktur PT SBI: PO-78 Selesai')" type="button" title="Lihat DO Pabrik"><span class="material-symbols-outlined text-[16px]">visibility</span></button>
 <span class="text-[11px] text-[#15803d] font-semibold flex items-center gap-0.5"><span class="material-symbols-outlined text-[15px]">check_circle</span>GRN Selesai</span>
 </div>
 </td>
@@ -302,7 +302,7 @@
 </td>
 <td class="py-3 px-4 text-center">
 <div class="inline-flex items-center gap-1.5">
-<button class="h-7 px-2.5 rounded-md bg-white border border-slate-200 hover:bg-slate-50 text-slate-700 text-[11px] font-medium transition-colors cursor-pointer shadow-2xs" onclick="alert('Arsip DO PT Cemindo: Sukses masuk gudang')" type="button">Lihat DO Pabrik</button>
+<button class="w-7 h-7 flex items-center justify-center p-0 rounded-md bg-white border border-slate-200 hover:bg-slate-50 text-slate-700 transition-colors cursor-pointer shadow-2xs" onclick="alert('Arsip DO PT Cemindo: Sukses masuk gudang')" type="button" title="Lihat DO Pabrik"><span class="material-symbols-outlined text-[16px]">visibility</span></button>
 <span class="text-[11px] text-[#15803d] font-semibold flex items-center gap-0.5"><span class="material-symbols-outlined text-[15px]">check_circle</span>GRN Selesai</span>
 </div>
 </td>
@@ -370,5 +370,4 @@
 
 
 
-<div id="snapdom-sandbox" data-snapdom-sandbox="true" aria-hidden="true" style="position: absolute; left: -9999px; top: -9999px; width: 0px; height: 0px; overflow: hidden;"></div><script src="../js/script.js"></script>
-</body></html>
+<div id="snapdom-sandbox" data-snapdom-sandbox="true" aria-hidden="true" style="position: absolute; left: -9999px; top: -9999px; width: 0px; height: 0px; overflow: hidden;"></div><script src="js/script.js"></script>\n</body></html>
